@@ -1,0 +1,156 @@
+.cls-trip-btn {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  margin-right: 30px;
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--t-scroll-background);
+    border: 1px solid var(--t-scroll-border-color);
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--t-scroll-color);
+    border: 1px solid var(--t-scroll-border-color);
+  }
+  &.ant-radio-group {
+    label {
+      &.ant-radio-button-wrapper {
+        height: 38px;
+        min-width: max-content;
+        font-size: 14px;
+        font-family: var(--font-medium);
+        padding: 0px 12px;
+        border: 1px solid var(--t-common-primary);
+        border-left: 0px;
+        background-color: var(--t-header-background);
+        color: var(--t-header-text);
+        &:first-child {
+          border-left: 1px solid var(--t-common-primary);
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        &::before {
+          background-color: var(--t-common-primary);
+        }
+        &:last-child {
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        &.ant-radio-button-wrapper-checked {
+          background-color: var(--t-common-primary);
+          border: 1px solid var(--t-common-primary);
+          color: var(--t-add-ssr-flight-header-text-color);
+          .cls-fv-number {
+            color: var(--t-add-ssr-flight-header-text-color);
+          }
+          &:hover {
+            color: var(--t-add-ssr-flight-header-text-color);
+            .cls-fv-number {
+              color: var(--t-add-ssr-flight-header-text-color);
+            }
+          }
+        }
+        .cls-fv-number {
+          font-size: 12px;
+          color: var(--t-header-text);
+        }
+      }
+    }
+  }
+}
+
+.cls-header-btn {
+  button {
+    padding: 0 10px;
+    vertical-align: middle;
+    font-size: 15px;
+    transition: all 0.3s;
+    ::selection {
+      background: none;
+      color: none;
+    }
+    &.ant-btn {
+      &.ant-btn-text {
+        .ant-btn-icon {
+          margin-right: 3px;
+          padding: 0px;
+          vertical-align: -2px;
+          span {
+            &::before {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .cls-addSSRTabs {
+    margin: 0;
+    .ant-col {
+      padding: 0 0 10px 0;
+      .ant-radio-group {
+        margin-inline: 0;
+      }
+    }
+    .cls-flight-header-btn {
+      margin-inline-end: 0;
+      width: max-content;
+      .ant-btn {
+        height: 65px;
+        flex-wrap: wrap;
+        gap: 0px;
+        background-color: var(--t-header-background);
+        justify-content: center;
+        align-items: center;
+        padding-block: 7px;
+        .ant-btn-icon {
+          display: block;
+          width: 100%;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .cls-trip-btn {
+      padding-block-start: 0;
+      label {
+        &.ant-radio-button-wrapper {
+          height: 40px;
+          padding-inline: 10px;
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .cls-header-btn {
+      .ant-btn-text {
+        &:hover {
+          .ant-btn-icon {
+            span {
+              &::before {
+                color: var(--t-add-ssr-flight-header-text-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-addSSRTabs {
+    margin: 0 0 0 5px;
+  }
+}

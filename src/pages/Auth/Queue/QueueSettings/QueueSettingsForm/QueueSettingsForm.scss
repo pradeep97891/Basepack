@@ -1,0 +1,217 @@
+.QueueSettingsForm {
+
+  .ant-select-selector,
+  .ant-input {
+    font-size: 14px;
+    font-family: var(--font-regular);
+  }
+
+  .add-queue__btn {
+    padding: 20px 0px 0px;
+  }
+
+  .cls-queue-settings-form-col {
+    font-size: 13px;
+    padding: 0 10px;
+
+    .ant-form-item {
+      .ant-row {
+        .ant-form-item-label {
+          label {
+            padding-bottom: 6px;
+          }
+        }
+      }
+    }
+
+    .queue-form-input-info {
+      padding-block: 7px 0px;
+    }
+  }
+
+  .cls-queue-settings-form-col:last-child {
+
+    &.close-form-icon {
+      position: relative;
+
+      div {
+        cursor: pointer;
+      }
+
+      div:hover {
+        svg {
+          filter: drop-shadow(0px 0px 10px var(--in-active));
+        }
+      }
+
+      .cls-closeIcon {
+        position: absolute;
+        top: 10px;
+        font-size: 20px;
+        color: var(--ant-color-error-active);
+      }
+    }
+  }
+}
+
+.ant-form-item-label {
+  padding: 0;
+}
+
+.ant-form-item-control-input {
+  border-radius: 5px;
+}
+
+.ant-input,
+.ant-select-selector {
+  border-radius: 5px !important;
+}
+
+.ant-form-item {
+  margin-bottom: 0;
+}
+
+.ant-form-item-label {
+  padding-bottom: 0 !important;
+}
+
+.queue-form-input-info {
+  padding: 5px 0;
+  font-size: 12px;
+  font-family: var(--font-regular);
+  font-style: italic;
+}
+
+.ant-switch-checked {
+  background-color: var(--check-box-color);
+}
+
+.cls-queue-condition-form-row {
+  margin-bottom: 10px;
+}
+
+.queue-update__btn {
+  Button {
+    border-radius: 5px;
+  }
+}
+
+.cls-queue-con {
+  h2 {
+    font-size: 16px;
+    font-family: var(--font-bold);
+  }
+
+  h4 {
+    font-size: 12px;
+    font-style: italic;
+    color: #545454;
+  }
+}
+
+.cls-queueSetting {
+  font-family: "InterMedium";
+  min-width: 120px;
+  padding: 10px 15px;
+  height: unset;
+  border-radius: 5px;
+  margin-right: 25px;
+  color: #ffffff;
+  background: linear-gradient(to right, #F8B133, #D22635);
+
+  &:hover {
+    color: #fff;
+    border: 1px solid #F8B133;
+    background: linear-gradient(to right, #D22635, #F8B133) !important;
+  }
+}
+
+.cls-status-btn {
+  .ant-switch-checked {
+    background: #133769;
+  }
+}
+
+.QueueSettingsForm {
+  .cls-queue-condition-form-row:has(.ant-form-item-label) {
+    .close-form-icon {
+      .cls-closeIcon {
+        top: 39px;
+      }
+    }
+  }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+  .cls-queue-settings {
+    padding: 0px;
+
+    .cls-queue-box-container {
+      .cls-edit-queue-container {
+        .ant-card {
+          .ant-card-body {
+            padding-inline: 10px;
+
+            .QueueSettingsForm {
+              .cls-queue-settings-form-col {
+                margin-bottom: 15px;
+              }
+
+              .cls-queue-condition-form-row {
+                background: var(--t-ad-body-background);
+                padding: 20px 0px;
+                margin-bottom: 20px;
+                column-gap: 10px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+  .cls-queue-settings {
+    padding: 10px;
+
+    .cls-queue-box-container {
+      .cls-edit-queue-container {
+        .ant-card {
+          .ant-card-body {
+            .QueueSettingsForm {
+              .cls-queue-condition-form-row {
+                row-gap: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:1200px) and (max-width:1600px) {
+
+  .cls-queue-settings {
+    padding: 0px;
+
+    .cls-queue-box-container {
+      .cls-edit-queue-container {
+        .ant-card {
+          .ant-card-body {
+            padding-inline: 10px;
+
+            .QueueSettingsForm {
+              .cls-queue-settings-form-col
+               &:first-child,&:last-child {
+                padding: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

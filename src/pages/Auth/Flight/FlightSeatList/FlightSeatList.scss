@@ -1,0 +1,53 @@
+.cls-flightSeatList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0px 30px 30px;
+  .cls-seat-list {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: unset;
+    max-width: unset;
+  }
+  .cls-seatlist_icon {
+    margin-block-start: 5px;
+  }
+}
+
+.cls-passengerListMain {
+  .cls-flightSeatList {
+    margin: 15px 0px 5px;
+    gap: 9px;
+    .cls-seat-list {
+      border: 1px solid var(--t-flight-view-btn-border-color);
+      border-radius: 35px;
+      width: 96px;
+      height: 35px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .cls-seatlist_icon {
+      margin-block: 5px;
+      svg {
+        width: 18px;
+        height: 21px;
+      }
+      .Infi-Fd_57_BaggageLite {
+        &::before {
+          font-size: 20px;
+        }
+      }
+      .Infi-Fd_54_Meals {
+        &::before {
+          font-size: 18px;
+        }
+      }
+    }
+    span {
+      font-family: var(--font-medium);
+      font-size: 13px;
+    }
+  }
+}

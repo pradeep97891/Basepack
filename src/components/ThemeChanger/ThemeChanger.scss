@@ -1,0 +1,95 @@
+.ThemeChanger {
+  .ant-radio-button-wrapper {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+    border: 0;
+    margin-top: 10px;
+    box-shadow: none !important;
+    &.dark {
+      svg {
+        background: #2c3768b3;
+        border-radius: 3px;
+      }
+      .checked-icon svg {
+        background: none;
+      }
+    }
+    &.VA{
+      svg {
+        background: linear-gradient(90deg, #F8B133 -35.02%, #D22635 108.51%);
+        border-radius: 3px;
+      }
+      .checked-icon svg {
+        background: none;
+      }
+    }
+    &.GF{
+      svg {
+        background: #a18f63;
+        border-radius: 3px;
+      }
+      .checked-icon svg {
+        background: none;
+      }
+    }
+  }
+}
+.NavBgChanger {
+  .ant-radio-button-wrapper {
+    padding: 12px;
+    border-radius: 5px;
+    &.navlight {
+      border: 1px solid #323233 !important;
+      background: #ffffff;
+    }
+    &.navdark {
+      border: 1px solid #1c2533;
+      background: #1e2962;
+    }
+  }
+}
+.ThemeChanger,
+.NavBgChanger {
+  .ant-radio-button-wrapper {
+    margin-right: 1rem;
+  }
+  .ant-radio-button-wrapper-checked {
+    .checked-icon {
+      display: block;
+    }
+  }
+  .checked-icon {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+  }
+}
+.cls-theme-change,
+.sider-change {
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.cls-layout-group {
+  label {
+    &.ant-radio-button-wrapper {
+      border: 1px solid var(--t-common-primary);
+      background-color: var(--t-header-background);
+      color: var(--t-common-primary);
+      padding-inline: 12px;
+      border-radius: 3px;
+      &.ant-radio-button-wrapper-checked {
+        background-color: var(--t-common-primary);
+        color: var(--t-link-color);
+      }
+    }
+  }
+}
+
+.cls-airline-theme-logo {
+  background-color: #fff;
+}

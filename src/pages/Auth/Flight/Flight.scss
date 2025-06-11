@@ -1,0 +1,330 @@
+// .cls-flight-ele {
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   /* Scrollbar Styling */
+//   ::-webkit-scrollbar {
+//     width: 6px;
+//   }
+//   ::-webkit-scrollbar-track {
+//     background-color: var(--t-scroll-background);
+//     -webkit-border-radius: 10px;
+//     border-radius: 10px;
+//   }
+//   ::-webkit-scrollbar-thumb {
+//     -webkit-border-radius: 10px;
+//     border-radius: 10px;
+//     background: var(--t-scroll-color);
+//   }
+//   .cls-seat-row-num {
+//     flex-wrap: wrap;
+//     width: 10px;
+//     margin-block: 20px;
+//     .cls-seat-row-group {
+//       display: flex;
+//       flex-wrap: wrap;
+//       gap: 13px;
+//       justify-content: center;
+//       span {
+//         width: 100%;
+//         color: var(--t-common-grey-color);
+//         text-align: center;
+//       }
+//     }
+//   }
+//   .cls-child-icon-col {
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     .cls-child-icon-group {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       gap: 52px;
+//     }
+//     span {
+//       font-size: 18px;
+//     }
+//   }
+//   .cls-meals-row {
+//     flex-wrap: wrap;
+//     margin-block: 36px;
+//     article {
+//       width: 100%;
+//       text-align: center;
+//       &::before {
+//         font-size: 22px;
+//       }
+      
+//     }
+//     .cls-bottom {
+//       align-self: flex-end;
+//       .cls-arrow {
+//         margin-top: 12px;
+//         &::before {
+//           font-size: 15px;
+//           display: block;
+//           transform: rotate(90deg);
+//           color: #DA373E;
+//           margin-bottom: 4px;
+//         }
+//         &::after {
+//           content: '';
+//           width: 15px;
+//           display: block;
+//           position: absolute;
+//           left: calc(50% - 15px);
+//           height: 1px;
+//           background-color: #DA373E;
+//         }
+//       }
+//     }
+//     .cls-top {
+//       .cls-arrow {
+//         font-size: 22px;
+//         margin-bottom: 12px;
+//         &::before {
+//           font-size: 15px;
+//           display: block;
+//           transform: rotate(-90deg);
+//           color: #DA373E;
+//           margin-top: 4px;
+//         }
+//         &::after {
+//           content: '';
+//           width: 15px;
+//           display: block;
+//           position: absolute;
+//           top: 0px;
+//           left: calc(50% - 16px);
+//           height: 1px;
+//           background-color: #DA373E;
+//         }
+//       }
+//     }
+//   }
+//   .cls-flight-front {
+//     padding-top: 135px;
+//     padding-left: 35px;
+//   }
+//   .cls-bend-line {
+//     padding-top: 98px;
+//     padding-left: 60px;
+//   }
+//   .cls-seat-col-num {
+//     margin: 3px 5px;
+//     display: inline-block;
+//     padding: 5px;
+//     width: 24px;
+//     text-align: center;
+//     height: 26px;
+//     color: var(--t-common-grey-color);
+//   }
+//   .cls-seat-customizate {
+//     width: 24px;
+//   }
+//   .cls-airline-outer {
+//     border: 2px solid #ededed;
+//     margin-top: 8px;
+//     // margin-left: 24px;
+//     padding: 14px 0px 17px;
+//     border-left: none;
+//     min-width: 600px;
+//     // min-height: 419px;
+//     min-height: 285px;
+//   }
+//   .cls-front-fight {
+//     width: 350px;
+//   }
+//   .cls-font-inner {
+//     margin-top: 28px;
+//   }
+//   .cls-design-part {
+//     overflow: hidden;
+//   }
+//   .cls-flight-seat-space {
+//     margin: 2px;
+//     width: 24px;
+//     height: 26px;
+//     .cls-seat-tooltip {
+//       span {
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .cls-seat-section {
+//     margin: 22px 5px 23px;
+//   }
+//   .cls-seat-colNum {
+//     margin-left: 30px;
+//     min-width: 600px;
+//     min-height: 20px;
+//   }
+//   .cls-select-seat-pax {
+//     position: absolute;
+//     top: -10px;
+//   }
+// }
+
+.cls-flight-ele {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--t-scroll-background);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--t-scroll-color);
+  }
+  .cls-seat-row-num {
+    flex-wrap: wrap;
+    width: 10px;
+    margin-block: 20px;
+    .cls-seat-row-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      justify-content: center;
+      span {
+        width: 100%;
+        color: var(--t-common-grey-color);
+        text-align: center;
+      }
+    }
+  }
+  .cls-child-icon-col {
+    flex-wrap: wrap;
+    justify-content: center;
+    .cls-child-icon-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 52px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+  .cls-meals-row {
+    flex-wrap: wrap;
+    margin-block: 36px;
+    article {
+      width: 100%;
+      text-align: center;
+      &::before {
+        font-size: 22px;
+      }
+      
+    }
+    .cls-bottom {
+      align-self: flex-end;
+      .cls-arrow {
+        margin-top: 12px;
+        &::before {
+          font-size: 15px;
+          display: block;
+          transform: rotate(90deg);
+          color: #DA373E;
+          margin-bottom: 4px;
+        }
+        &::after {
+          content: '';
+          width: 15px;
+          display: block;
+          position: absolute;
+          left: calc(50% - 15px);
+          height: 1px;
+          background-color: #DA373E;
+        }
+      }
+    }
+    .cls-top {
+      .cls-arrow {
+        font-size: 22px;
+        margin-bottom: 12px;
+        &::before {
+          font-size: 15px;
+          display: block;
+          transform: rotate(-90deg);
+          color: #DA373E;
+          margin-top: 4px;
+        }
+        &::after {
+          content: '';
+          width: 15px;
+          display: block;
+          position: absolute;
+          top: 0px;
+          left: calc(50% - 16px);
+          height: 1px;
+          background-color: #DA373E;
+        }
+      }
+    }
+  }
+  .cls-flight-front {
+    padding-top: 135px;
+    padding-left: 35px;
+  }
+  .cls-bend-line {
+    padding-top: 98px;
+    padding-left: 60px;
+  }
+  .cls-seat-col-num {
+    margin: 3px 5px;
+    display: inline-block;
+    padding: 5px;
+    width: 24px;
+    text-align: center;
+    height: 26px;
+    color: var(--t-common-grey-color);
+  }
+  .cls-seat-customizate {
+    width: 24px;
+  }
+  .cls-airline-outer {
+    border: 1.5px solid #d6d5d5;
+    margin-top: 9px;
+    margin-left: 24px;
+    padding: 14px 0px 17px;
+    border-left: none;
+    min-width: 600px;
+    min-height: 417px;
+  }
+  .cls-front-fight {
+    width: 350px;
+  }
+  .cls-font-inner {
+    margin-top: 28px;
+  }
+  .cls-design-part {
+    overflow: hidden;
+  }
+  .cls-flight-seat-space {
+    margin: 3px 5px;
+    width: 24px;
+    height: 26px;
+    .cls-seat-tooltip {
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+  .cls-seat-section {
+    margin: 22px 5px 23px;
+  }
+  .cls-seat-colNum {
+    margin-left: 30px;
+    min-width: 600px;
+    min-height: 20px;
+  }
+  .cls-select-seat-pax {
+    position: absolute;
+    top: -10px;
+  }
+}

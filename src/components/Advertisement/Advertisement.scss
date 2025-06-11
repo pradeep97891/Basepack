@@ -1,0 +1,27 @@
+.cls-upcoming-event-container {
+    max-height: 300px;
+    border-radius: 15px;
+  
+    .cls-upcoming-event-title {
+      color: var(--t-common-card-heading);
+    }
+  
+    .ant-card-body {
+      padding: 10px 12px;
+    }
+  
+    .cls-db-event-ele {
+      margin-block-start: 10px;
+      background-color: var(--t-ad-body-background);
+      color: var(--t-ad-body-color);
+      border-radius: 15px;
+
+      .cls-time{
+        color: var(--t-ad-body-color) !important;
+      }
+    }
+  
+    .cls-ad-img {
+      filter: grayscale(var(--t-image-greyScale));
+    }
+  }

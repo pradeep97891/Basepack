@@ -1,0 +1,24 @@
+.filterBox {
+  margin-top: 30px;
+  z-index: 1;
+  width: 100%;
+  min-height: 200px;
+  position: absolute;
+  top: 13%;
+  left: 0;
+  background-color: var(--background);
+  box-shadow: 0 0 5px var(--footer-gray-color);
+  .filterCol {
+    padding: 15px;
+  }
+
+  .ClearFilter {
+    text-align: end;
+    button {
+      padding: 0;
+      padding-block-start: 10px;
+      padding-inline-end: 18px;
+      height: fit-content;
+    }
+  }
+}

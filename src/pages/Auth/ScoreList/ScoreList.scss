@@ -1,0 +1,12 @@
+.cls-ScoreList {
+    .cls-score-select {
+        .ant-select-selector {
+            background: var(--t-btn-primary-background-color, linear-gradient(90deg, #f8b133 -35.02%, #d22635 108.51%));
+            border: unset;
+            width: 125px;
+        }
+        .ant-select-selection-placeholder, .ant-select-selection-item, svg {
+            color: var(--t-btn-primary-color);
+        }
+    }
+}

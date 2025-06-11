@@ -1,0 +1,243 @@
+.cls-baggage-ele {
+  height: 539px;
+  overflow: auto;
+  border: unset;
+
+  .ant-card-body {
+    padding: 0px;
+  }
+
+  .ant-col {
+    &:nth-child(odd) {
+      .cls-booking-box {
+        margin-right: 7px;
+      }
+    }
+
+    .cls-booking-box {
+      img {
+        width: 62px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .cls-booking-box {
+    border: 1px solid var(--t-flight-view-btn-border-color);
+    border-radius: 10px;
+    align-items: center;
+
+    span {
+      &::before {
+        font-size: 38px;
+        color: var(--t-common-grey-color-md);
+      }
+    }
+  }
+
+  .cls-baggage-weight {
+    border-right: 1px dashed #999999;
+    height: 18px;
+    line-height: 18px;
+  }
+
+  .cls-meals-list {
+    color: var(--t-header-text-color);
+  }
+
+  .cls-baggage-add-btn {
+    color: var(--t-common-grey-color);
+    border: 1px solid var(--t-flight-view-btn-border-color);
+    border-radius: 6px;
+    height: 28px;
+    padding-top: 2px;
+  }
+
+  .meals-price-status {
+    display: flex;
+    align-items: center;
+
+    .ant-badge {
+      border: 1px solid var(--ant-color-success);
+      height: 15px;
+      width: 15px;
+      text-align: center;
+      margin-right: 10px;
+
+      &:has(.ant-badge-status-error) {
+        border-color: var(--ant-color-error);
+      }
+
+      &:has(.ant-badge-status-success) {
+        border-color: var(--ant-color-success);
+      }
+
+      .ant-badge-status-dot {
+        vertical-align: 5px;
+        padding: 2px;
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+
+  .cls-select-seat-pax {
+    padding-bottom: 10px;
+  }
+
+  .cls-fv-seat-header {
+    color: #333333;
+  }
+
+  .cls-meals-btn {
+    .ant-btn-default {
+      border: 1px solid var(--t-add-ssr-meal-header-active-bg);
+      padding-inline: 15px;
+      width: max-content;
+      border-radius: 32px !important;
+
+      &:hover {
+        background-color: var(--t-add-ssr-meal-header-active-bg);
+
+        span {
+          color: var(--t-add-ssr-meal-header-active-text-color);
+        }
+      }
+
+      span {
+        font-size: 13px;
+        font-family: var(--font-medium);
+        color: var(--t-header-text-color);
+      }
+    }
+
+    .cls-active {
+      background-color: var(--t-add-ssr-meal-header-active-bg);
+      border-color: var(--t-common-primary);
+
+      span {
+        color: var(--t-add-ssr-meal-header-active-text-color);
+      }
+    }
+  }
+
+}
+
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(1000px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: opacity 500ms, transform 500ms;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .cls-baggage-ele {
+    height: max-content;
+    margin-inline: 10px;
+
+    .ant-row {
+      .ant-col {
+        .cls-booking-box {
+          padding: 8px;
+          margin: 15px 0 0;
+          img {
+            width: 58px;
+          }
+        }
+      }
+    }
+
+    .cls-select-seat-pax {
+      padding: 0;
+    }
+
+    .cls-meals-list {
+      padding-inline-start: 10px;
+
+      div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .cls-baggage-ele {
+    height: max-content;
+    margin-inline: 10px;
+
+    .ant-row {
+      .ant-col {
+        &:nth-child(odd) {
+          .cls-booking-box {
+            margin-inline-end: 10px;
+          }
+        }
+      }
+    }
+
+    .cls-select-seat-pax {
+      padding: 0;
+    }
+
+    .cls-meals-list {
+      padding-inline-start: 10px;
+
+      div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-baggage-ele {
+    margin: 0 15px;
+    .cls-meals-list, .cls-booking-box {
+      div {
+        font-size: 12px !important;
+        font-family: var(--font-regular) !important;
+        .ant-col {
+          font-size: 13px !important;
+          font-family: var(--font-semibold);
+        }
+      }
+    }
+    .ant-col {
+      &:nth-child(even) {
+        .cls-booking-box {
+          margin-inline-start: 5px;
+        }
+      }
+      .cls-booking-box {
+        padding: 5px;
+        div {
+          font-family: var(--font-semibold);
+        }
+        img {
+          width: 50px;
+          padding-inline-end: 5px;
+        }
+      }
+      .cls-baggage-add-btn {
+        padding-inline: 5px;
+      }
+    }
+  }
+}

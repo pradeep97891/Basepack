@@ -1,0 +1,19 @@
+{
+  "response": {
+    "responseCode": 0,
+    "response": {
+      "Message": "Success",
+      "data": {
+        "user_id": 1,
+        "email_id": "balaji@infinitisoftware.net",
+        "groups": ["Super user"]
+      }
+    }
+  },
+  "failure_response": {
+    "responseCode": 1,
+    "response": {
+      "Message": "Autherizaton failed"
+    }
+  }
+}

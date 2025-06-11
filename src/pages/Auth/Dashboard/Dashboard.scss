@@ -1,0 +1,476 @@
+.cls-FdDashboard {
+  font-family: var(--font-regular);
+  padding: 20px;
+  .cls-bg-arrow {
+    &::before {
+      content: "\e94f";
+      font-family: 'InfiFdIcons';
+      color: var(--t-add-ssr-flight-header-text-color);
+      font-size: 80px;
+      position: absolute;
+      top: -47px;
+      left: -9px;
+    }
+    span {
+      position: relative;
+      z-index: 1;      
+    }
+  }
+  .ant-select-arrow {
+    svg {
+      path {
+        color: var(--t-common-primary);
+      }
+    }
+  }
+  .ant-switch {
+    background-color: var(--t-common-primary);
+  }
+  .cls-refresh-text {
+    vertical-align: middle;
+    margin-top: 3px;
+    background-color: var(--t-dashboard-refresh-bg);
+    color: var(--t-common-grey-color);
+    padding: 4px 5px;
+  }
+  .cls-refresh-icon {
+    margin-inline-start: 7px;
+    // margin-block-start: 5px;
+  }
+  .cls-next-day {
+    position: absolute;
+    top: -3px;
+  }
+}
+
+.cls-row {
+  margin-top: 22px;
+  margin-bottom: 14px;
+  .ant-card {
+    border-radius: 10px;
+  }
+  .ant-card-body {
+    padding: 0px;
+  }
+  .cls-pax-card {
+    padding: 15px;
+  }
+
+  .cls-gap {
+    padding-right: 12px;
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+  .cls-adhoc-card {
+    padding: 12px;
+  }
+  .cls-affect-btn {
+    width: 80%;
+    height: 22px;
+    background-color: var(--t-dashboard-refresh-bg);
+    border-color: var(--t-dashboard-refresh-bg);
+    border-radius: 20px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    span {
+      color: var(--t-common-grey-color);
+      font-size: 10px;
+      height: 15px;
+    }
+  }
+  .cls-Adhoc {
+    .ant-progress .ant-progress-bg {
+      background: linear-gradient(90deg, #1e6cd9 0%, #1659b6 100%);
+    }
+  }
+  .cls-Pre-planned {
+    .ant-progress .ant-progress-bg {
+      background: linear-gradient(90deg, #35b057 0%, #46c96b 100%);
+    }
+  }
+}
+
+.cls-attention-gap {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  padding-right: 12px;
+  height: 315px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  .ant-card-body {
+    padding: 10px;
+  }
+
+  .cls-attention-header {
+    padding: 8px;
+    background-color: var(--t-dashboard-header-bg);
+    opacity: 44%;
+  }
+  .cls-attention-row {
+    padding: 15px;
+    background-color: var(--t-dashboard-attention-list-bg);
+    border-radius: 6px;
+  }
+  .cls-blue {
+    color: #3667cb;
+  }
+  .cls-black {
+    color: #000000;
+  }
+}
+.cls-blue {
+  color: var(--t-dashboard-blue) !important;
+}
+.cls-green {
+  color: var(--t-dashboard-barchart-accept) !important;
+}
+.cls-lightgray {
+  color: var(--t-common-grey-color-md);
+}
+.cls-attention-col {
+  .anticon {
+    color: #ff6c60 !important;
+  }
+}
+.cls-notification-header {
+  padding: 8px 10px;
+  background-color: var(--t-dashboard-header-bg);
+  opacity: 44%;
+  height: 34px;
+}
+.cls-notification-row {
+  padding: 10px;
+  .cls-notification-msg {
+    background-color: var(--t-dashboard-refresh-bg);
+    vertical-align: sub;
+    padding: 5px;
+    border-radius: 6px;
+    // color: var(--t-dashboard-refresh-bg);
+  }
+  .ant-badge.ant-badge-status .ant-badge-status-dot {
+    width: 13px;
+    height: 13px;
+  }
+  .ant-divider-horizontal {
+    margin: 0px;
+  }
+}
+.cls-chart-gap {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  padding-right: 12px;
+  height: 371px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  .ant-card-body {
+    padding: 15px;
+  }
+
+  .cls-chart-header {
+    padding: 8px;
+    overflow: auto;
+    // background-color: var(--t-dashboard-header-bg);
+    // opacity: 44%;
+  }
+  .cls-chart-row {
+    padding: 15px;
+    background-color: var(--t-dashboard-attention-list-bg);
+    border-radius: 6px;
+  }
+  .cls-blue {
+    color: #3667cb;
+  }
+  .cls-black {
+    color: #000000;
+  }
+}
+.cls-customer-chart-gap {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  padding-right: 12px;
+  height: 371px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  .ant-card-body {
+    padding: 15px;
+  }
+
+  .cls-chart-header {
+    padding: 8px;
+    // background-color: var(--t-dashboard-header-bg);
+    // opacity: 44%;
+  }
+  .cls-chart-row {
+    padding: 15px;
+    background-color: var(--t-dashboard-attention-list-bg);
+    border-radius: 6px;
+  }
+  .cls-blue {
+    color: #3667cb;
+  }
+  .cls-black {
+    color: #000000;
+  }
+}
+.cls-sort, .cls-attention-gap {
+  .ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+    box-shadow: 0px 1px 3px 0px #00000024;
+    border: none;
+    font-size: 12px;
+  }
+  .ant-select .ant-select-arrow {
+    padding-top: 2px;
+    color: var(--t-dashboard-select-arrow-color);
+  }
+}
+.cls-calendar-filter {
+  .ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+    box-shadow: 0px 1px 3px 0px #00000024;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    // padding: 18px 65px 18px 10px;
+  }
+  .ant-select .ant-select-arrow {
+    padding-top: 5px;
+    color: var(--t-dashboard-select-arrow-color);
+  }
+}
+.cls-pnrSearch {
+  // padding: 0px;
+  // margin: 0px;
+
+  .cls-pnrInput {
+    input {
+      padding: 4px;
+    }
+    border: none;
+    height: 36px;
+    background: var(--t-autofill-bg-color);
+    border-radius: 4px;
+    padding: 0px 0px 0px 4px;
+  }
+
+  .ant-input-suffix {
+    background: #e4eaf5;
+    padding: 4px 10px;
+    .anticon-search {
+      color: #000000;
+      font-size: 18px;
+    }
+  }
+}
+.cls-action {
+  position: relative;
+
+}
+.cls-turnaround-table {
+  .ant-table-thead {
+    font-size: 12px;
+  }
+}
+
+.cls-tabel-container{
+  .ant-table{
+    .ant-table-container{
+      .ant-table-content{
+        table{
+          border-spacing: 0px 20px;
+
+        .ant-table-thead{
+
+      
+          .ant-table-cell{
+            padding:10px 10px;
+            &.cls-duration{
+              position: absolute;
+              padding: 0px;
+            }
+            &::before{
+              content: unset !important;
+            }
+        }
+        }
+        .ant-table-tbody{
+          .ant-table-row{
+            position: relative;
+            .ant-table-cell{
+              background-color: var(--t-dashboard-attention-list-bg);
+              padding: 20px 10px;
+              span{
+                font-size: 12px;
+              }
+              
+              &.cls-duration {
+                span{
+                padding: 5px;
+                border-radius: 10px;
+                position: absolute;
+                background-color: var(--t-dashboard-remaining-time-bg);
+                color: var(--ant-color-error);
+                width: max-content;
+                top: -12px;
+                right: 5px;
+              }
+              }
+
+              &.cls-flightNumber{
+                span{
+                position: relative;
+                z-index: 1;   
+                color: var(--t-dashboard-blue);
+
+                &::before {
+                  content: "\e94f";
+                  font-family: "InfiFdIcons";
+                  color: var(--t-add-ssr-flight-header-text-color);
+                  font-size: 80px;
+                  position: absolute;
+                  top: -50px;
+                  left: -11px;
+                  z-index: -1;
+                }
+                }
+          
+              }
+
+              &.cls-status{
+                span{
+                color: var(--t-dashboard-barchart-accept);
+                }
+              }
+    
+              &.cls-action{
+                span{
+                color: var(--t-dashboard-blue);}
+              }
+            }
+
+            .ant-table-cell:has(.cls-duration) {
+              position: relative;
+              padding: 0px;
+            }
+          }
+        }
+      }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+.cls-FdDashboard{
+  padding : 0px;
+}
+}
+
+@media (min-width: 320px) and (max-width: 575px)
+{
+  .cls-attention-gap{
+    .ant-card-body{
+      .cls-notification-header{
+        display: none;
+      }
+    }
+  }
+
+  .cls-chart-col{
+    height: 330px;
+    overflow-y: hidden;
+    .ant-card{
+      .ant-card-body{
+        .cls-chart-header{
+          overflow-y: hidden;
+          .cls-turnaround-table{
+            .recharts-wrapper{
+              width: 530px !important;
+              left: -35px;
+              top: -40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cls-scroll-list{
+    overflow-y: auto !important;
+  }
+
+  .cls-gap {
+    .cls-customer-chart-gap{
+      height: 430px;
+      overflow-y: hidden;
+      .recharts-wrapper{
+        width: 380px !important;
+        left: -30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cls-FdDashboard .fs-28 {
+    font-size: 22px;
+  }
+  .cls-FdDashboard .fs-15 {
+    font-size: 12px;
+  }
+  .cls-FdDashboard .cls-calendar-filter {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 900px) {
+  .cls-FdDashboard .fs-28 {
+    font-size: 24px;
+  }
+  .cls-FdDashboard .fs-15 {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-tabel-container{
+    .ant-table{
+      .ant-table-container{
+        .ant-table-content{
+          table{
+          .ant-table-tbody{
+            .ant-table-row{
+              position: relative;
+              .ant-table-cell{
+                padding: 10px;
+                
+                &.cls-duration {
+                  position: unset;
+                  span{
+                    top: -12px;
+                  }
+                }
+  
+                &.cls-flightNumber{
+                  span{
+                    &::before {
+                     content: unset;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+}

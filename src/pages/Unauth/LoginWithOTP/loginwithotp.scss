@@ -1,0 +1,213 @@
+.cls-resend-code {
+  color: var(--t-forgot-psw-resend-otp);
+}
+.hide-number-arrows input[type="number"]::-webkit-inner-spin-button,
+.hide-number-arrows input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hide-number-arrows input[type="number"] {
+  -moz-appearance: textfield;
+}
+.cls-loginotp-btn {
+  margin-bottom: unset;
+  .ant-btn-primary {
+    // background: var(--brand-gradient);
+    color: var(--t-btn-primary-color);
+    background: var(--t-btn-primary-background-color);
+    margin-bottom: 25px;
+    &:hover {
+      background: var(--t-btn-primary-inverted-background-color)!important;
+      color: var(--t-btn-primary-color)!important;
+    
+  }
+  
+  }
+  .ant-btn-primary:disabled {
+    background: var(--brand-gradient);
+    color:#fff;
+    opacity: 0.5;
+  }
+
+}
+
+.cls-login-modal {
+  height: 520px;
+  display: flex;
+  align-items: center;
+  .cls-loginotp-btn{
+    .ant-btn-primary{
+      height: 32px;
+      margin-top: 30px;
+      span{
+        font-family: var(--font-regular);
+        font-size: 12px;
+      }
+    }
+  } 
+  .ant-form-item{
+    .ant-form-item-explain-error{
+      font-size: 12px;
+    }
+  } 
+  .cls-login-otp{
+    .cls-otp-input{
+      &.ant-input-password {
+        margin-block: 20px 0px;
+        padding: 0px 10px 0px 0px;
+      }
+      input{
+        padding: 10px;
+        font-size: 12px;
+      }
+    } 
+  } 
+  .Login{
+    .cls-login-label{
+      margin-bottom: 0px;
+    }
+    &.ant-form{
+      margin-top: 20px;
+    }
+    .cls-email-input{
+      padding:10px;
+      font-size: 12px;
+    }
+    span{
+      font-size: 10px;
+      &.cls-email-input{
+        padding: 0;
+        input{
+          padding: 10px;
+          font-size: 12px;
+        }
+        .cls-resend-code{
+          button {
+            padding: 0;
+            height: unset;
+          }
+        }
+      }
+    }
+    .cls-login-btn{
+      .ant-btn{
+        height: 32px;
+        span{
+          font-size: 13px;
+        }
+      }
+      &.cls-loginotp-btn{
+        .ant-btn{
+          margin-top: 20px;
+        }
+      }
+    }
+   
+  }
+}
+.cls-email-input{
+  padding: 10px;
+  font-family: var(--font-regular);
+}
+
+.cls-login-otp{
+  .cls-email-input{
+    padding: unset;
+    &:has(input:focus), &:has(input:hover) {
+      box-shadow: var(--ant-input-active-shadow);
+      border-radius: 4px;
+      .ant-input-group-addon {
+        border-color: transparent;
+      }
+    }
+    input{
+      padding: 14px 14px 14px 20px;
+      border-right: unset;
+      height: unset;
+      font-family: var(--font-semibold);
+      &:hover, &:focus{
+        border-color: transparent;
+      }
+      &.ant-input-status-error ~ .ant-input-group-addon{
+        border-color: var(--login-error-border);
+      }
+      &.ant-input-status-error:hover ~ .ant-input-group-addon{
+        border-color: var(--login-error-border-hover);
+      }
+      &.ant-input-status-error:focus ~ .ant-input-group-addon{
+        background: var(--input-error-bg);
+      }
+      &.ant-input-status-error{
+        &:focus{
+          &:hover{
+            & ~ .ant-input-group-addon{
+              border-color: var(--login-error-border);
+            }
+          }
+        }
+      }
+      &.ant-input.ant-input-status-error:focus,
+      &.ant-input:focus{
+        box-shadow: unset;
+      }
+    }
+    .ant-input-group-addon{
+      background: unset;
+      .cls-resend-code{
+        font-family: var(--font-regular);
+      }
+    }
+  }
+  input{
+    &.cls-email-input{
+      padding: 15px 20px;
+    }
+  }
+  .cls-otp-input{
+    padding: 0px 10px 0px 0px;
+    &:hover, &:focus{
+      border-color: transparent;
+      box-shadow: var(--ant-input-active-shadow);
+    }
+    &.ant-input-password {
+      margin-block: 0px 20px;
+    }
+    input{
+      padding: 10px;
+      border-right: unset;
+      height: unset;
+      font-family: var(--font-semibold);
+      // &:hover, &:focus{
+      //   border-color: transparent;
+      // }
+      &.ant-input-status-error ~ .ant-input-group-addon{
+        border-color: var(--login-error-border);
+      }
+      &.ant-input-status-error:hover ~ .ant-input-group-addon{
+        border-color: var(--login-error-border-hover);
+      }
+      &.ant-input-status-error:focus ~ .ant-input-group-addon{
+        background: var(--input-error-bg);
+      }
+      &.ant-input.ant-input-status-error:focus,
+      &.ant-input:focus{
+        box-shadow: unset;
+      }
+      &.ant-input-status-error{
+        &:focus{
+          &:hover{
+            & ~ .ant-input-group-addon{
+              border-color: var(--login-error-border);
+            }
+          }
+        }
+      }
+    }
+    .ant-input-group-addon{
+      background: unset;
+    }
+  }
+}
+ .cls-login-with-otp-btn{
+      margin-bottom: 22px;
+    }

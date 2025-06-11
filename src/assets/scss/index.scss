@@ -1,0 +1,713 @@
+@import './font.scss';
+@import './icons.scss';
+
+/* Setting default styles - starts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-regular);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  transition: background-color 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+
+.hide-scrollbar {
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+.show-scrollbar {
+  &::-webkit-scrollbar-track {
+    background-color: var(--t-scroll-background);
+    border: 1px solid var(--t-scroll-border-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--t-scroll-color);
+    border: 1px solid var(--t-scroll-border-color);
+  }
+}
+
+// Font size loop until 60px
+$base-font-size: 1px; // Setting base font size
+$max-font-size: 60px; // Setting maximum font size
+
+// SCSS loop to generate font size classes
+@for $i from 1 through $max-font-size {
+  .fs-#{$i} {
+    font-size: $base-font-size * $i !important;
+  }
+}
+
+// Margin and Padding loop until 50px
+$max-multiples: 10; // Setting maximum multiples for padding and margin
+$base-multiple-value: 5px; // Setting multiple value
+
+// SCSS loop to generate dynamic padding and margin classes
+@mixin generate-properties($class, $property, $value) {
+  @for $count from 0 through $max-multiples {
+    .#{$class}-#{$count} {
+      #{$property}: $count * $value;
+    }
+  }
+}
+
+// Generalized function for generating dynamic property classes
+@mixin generate-dynamic-classes($class-prefix, $property, $base-value, $max-value, $important: false) {
+  @for $count from 0 through $max-value {
+    .#{$class-prefix}-#{$count} {
+      #{$property}: $count * $base-value #{if($important, "!important", "")};
+    }
+  }
+}
+
+// SCSS function calls to generate dynamic padding and margin classes
+@include generate-properties("pl", "padding-inline-start", $base-multiple-value);
+@include generate-properties("pr", "padding-inline-end", $base-multiple-value);
+@include generate-properties("pt", "padding-block-start", $base-multiple-value);
+@include generate-properties("pb", "padding-block-end", $base-multiple-value);
+@include generate-properties("px", "padding-inline", $base-multiple-value);
+@include generate-properties("py", "padding-block", $base-multiple-value);
+@include generate-properties("ml", "margin-inline-start", $base-multiple-value);
+@include generate-properties("mr", "margin-inline-end", $base-multiple-value);
+@include generate-properties("mt", "margin-block-start", $base-multiple-value);
+@include generate-properties("mb", "margin-block-end", $base-multiple-value);
+@include generate-properties("mx", "margin-inline", $base-multiple-value);
+@include generate-properties("my", "margin-block", $base-multiple-value);
+
+
+// Width from 1% to 100%
+$max-width-multiples: 100; // Setting maximum multiples for width
+$base-width-multiple-value: 1%; // Setting multiple value
+
+// SCSS loop to generate dynamic width classes
+@mixin generate-width-properties($class, $property, $value) {
+  @for $count from 0 through $max-width-multiples {
+    .#{$class}-#{$count} {
+      #{$property}: $count * $value !important;
+    }
+  }
+}
+
+// SCSS function calls to generate dynamic width classes
+@include generate-width-properties("w", "width", $base-width-multiple-value);
+
+// Height from 1px to 500px
+$max-height-multiples: 500; // Setting maximum multiples for height
+$base-height-multiple-value: 1px; // Setting multiple value
+
+// SCSS loop to generate dynamic height classes
+@mixin generate-height-properties($class, $property, $value) {
+  @for $count from 0 through $max-height-multiples {
+    .#{$class}-#{$count} {
+      #{$property}: $count * $value !important;
+    }
+  }
+}
+
+// SCSS function calls to generate dynamic width classes
+@include generate-height-properties("h", "height", $base-height-multiple-value);
+
+
+// SCSS function calls to generate dynamic gap classes (1px to 100px)
+@include generate-dynamic-classes("g", "gap", 1px, 100, false);
+@include generate-dynamic-classes("rg", "row-gap", 1px, 100, true);
+@include generate-dynamic-classes("cg", "column-gap", 1px, 100, false);
+
+
+button {
+  cursor: pointer;
+  background: initial;
+  border-radius: 3px !important;
+}
+
+.p-clr {
+  color: var(--t-common-primary);
+}
+
+.s-clr {
+  color: var(--t-common-secondary);
+}
+
+.cls-cursor-pointer {
+  cursor: pointer;
+}
+
+.f-reg {
+  font-family: var(--font-regular);
+}
+
+.f-med {
+  font-family: var(--font-medium);
+}
+
+.f-sbold {
+  font-family: var(--font-semibold);
+}
+
+.f-bold {
+  font-family: var(--font-bold);
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sbold {
+  font-weight: 600;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+// For - Display properties - starts //
+.d-block {
+  display: block;
+}
+
+.d-iblock {
+  display: inline-block;
+}
+
+.d-flex,
+.flex-container {
+  display: flex;
+}
+// For - Display properties - ends //
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.a-self-center {
+  align-self: center;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// override ant tooltip text color
+
+// to align content in a flex container
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-container,
+.align-center {
+  align-items: center;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+// standard rounded corner
+.rounded {
+  border-radius: 4px;
+}
+
+// primary text (black for white light theme)
+.ant-tabs,
+.ant-breadcrumb-separator,
+.ant-breadcrumb>span:last-child,
+.ant-breadcrumb>span,
+.ant-breadcrumb>span a {
+  color: var(--primary-text);
+}
+
+// to remove existing ant radio button styles
+.custom-radio,
+.view-switch {
+  .ant-radio-button-wrapper {
+    &::before {
+      display: none;
+    }
+
+    border: 0;
+    height: auto;
+    box-shadow: none !important;
+  }
+}
+
+.custom-radio .ant-radio-button-wrapper {
+  padding: 0;
+}
+
+// Custom tooltip with menu
+.CustomTooltipMenu {
+  .ant-tooltip-inner {
+    padding: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  a,
+  button {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+
+    &:hover {
+      color: var(--hover-color);
+      background: var(--hover-bg);
+    }
+  }
+}
+
+// ant tab colors override
+.ant-tabs-tab.ant-tabs-tab-active {
+  .ant-tabs-tab-btn {
+    color: var(--primary-text);
+    text-shadow: none;
+  }
+}
+
+.ant-tabs-bottom>.ant-tabs-nav:before,
+.ant-tabs-bottom>div>.ant-tabs-nav:before,
+.ant-tabs-top>.ant-tabs-nav:before,
+.ant-tabs-top>div>.ant-tabs-nav:before,
+.border-bottom {
+  border-bottom: 1px solid var(--t-common-grey-color-md);
+}
+
+// for status bg and color
+.status-Active,
+.status-Inactive {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    border-radius: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+  }
+}
+
+.status-Active {
+  color: #37c57a;
+
+  &::before {
+    background: #37c57a;
+    box-shadow: #37c57a4f 0px 0px 0px 3px;
+  }
+}
+
+.status-Inactive {
+  color: #fd4646;
+
+  &::before {
+    background: #fd4646;
+    box-shadow: #fd464659 0px 0px 0px 3px;
+  }
+}
+
+.reset-btn {
+  border: 1px solid var(--ant-primary-color);
+  color: var(--ant-primary-color);
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.no-selection {
+  user-select: none;
+}
+
+// ant custom pagination
+.ant-pagination-item,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-prev .ant-pagination-item-link {
+  background: none;
+  border: 0;
+}
+
+.ant-pagination-item a {
+  color: var(--dark-grey);
+}
+
+.ant-pagination-item-active {
+  background: var(--hover-bg);
+  border-radius: 50%;
+
+  a {
+    color: var(--text-white);
+  }
+}
+
+.ant-pagination-prev .anticon-left,
+.ant-pagination-next .anticon-right {
+  svg {
+    display: none;
+  }
+
+  height: 0;
+  width: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  vertical-align: middle;
+}
+
+.ant-pagination-prev .anticon-left {
+  border-right: 9px solid;
+}
+
+.ant-pagination-next .anticon-right {
+  border-left: 9px solid;
+}
+
+.hide {
+  display: none;
+}
+
+.custom-modal {
+  .ant-modal-content {
+    position: relative;
+    border-radius: 0 0 10px 10px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 4px;
+    }
+
+    &::before {
+      background: var(--title-color);
+      left: 0;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+      background: var(--ant-primary-color);
+    }
+  }
+}
+
+/* Setting default styles - ends */
+
+/* General classes */
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+/* Margin properties - starts */
+.ml-auto {
+  margin-inline-start: auto;
+}
+
+.mr-auto {
+  margin-inline-end: auto;
+}
+
+.mt-auto {
+  margin-block-start: auto;
+}
+
+.ml-auto {
+  margin-block-end: auto;
+}
+
+.mv-center {
+  margin: auto 0;
+}
+
+.mh-center {
+  margin: 0 auto;
+}
+/* Margin properties - ends */
+
+.cls-hidden {
+  display: none;
+}
+
+.cls-disabled,
+:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  // pointer-events: none;
+}
+
+.cls-grayscale {
+  filter: grayscale(100%);
+}
+
+.cls-primary-color {
+  color: var(--t-common-primary) !important;
+}
+
+/* BG layout text color */
+.cls-bgLayout-text-color {
+  color: var(--t-bgLayout-header-text);
+}
+
+.cls-btn-styles {
+  height: fit-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cls-primary-btn {
+  @extend .cls-btn-styles;
+  color: var(--t-btn-primary-color) !important;
+  background: var(--t-btn-primary-background-color, linear-gradient(90deg, #f8b133 -35.02%, #d22635 108.51%)) !important;
+  border: unset !important;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: var(--t-btn-primary-color) !important;
+    background: var(--t-btn-primary-hover-background-color, linear-gradient(90deg, #f8b133 -35.02%, #d22635 108.51%)) !important;
+  }
+}
+
+.cls-primary-btn-inverted {
+  @extend .cls-btn-styles;
+  color: var(--t-btn-primary-inverted-color) !important;
+  background: var(--t-btn-primary-inverted-background-color, linear-gradient(90deg, #f8b133 -35.02%, #d22635 108.51%)) !important;
+  border: unset !important;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: var(--t-btn-primary-inverted-color) !important;
+    background: var(--t-btn-primary-inverted-hover-background-color, linear-gradient(90deg, #f8b133 -35.02%, #d22635 108.51%)) !important;
+  }
+}
+
+
+.cls-secondary-btn {
+  @extend .cls-btn-styles;
+  color: var(--t-btn-secondary-color) !important;
+  background: var(--t-btn-secondary-background-color, transparent) !important;
+  border: 1px solid var(--t-btn-secondary-border-color) !important;
+
+  &:hover {
+    color: var(--t-btn-secondary-hover-color) !important;
+    background: var(--t-btn-secondary-hover-background-color, #ffffff) !important;
+    border-color: var(--t-btn-secondary-hover-border-color, #ffffff) !important;
+  }
+}
+
+.cls-secondary-btn-inverted {
+  @extend .cls-btn-styles;
+  color: var(--t-btn-secondary-inverted-color) !important;
+  background: var(--t-btn-secondary-inverted-background-color, transparent) !important;
+  border: 1px solid var(--t-btn-secondary-inverted-border-color) !important;
+
+  &:hover {
+    color: var(--t-btn-secondary-inverted-hover-color) !important;
+    background: var(--t-btn-secondary-inverted-hover-background-color, #ffffff) !important;
+    border-color: var(--t-btn-secondary-inverted-hover-border-color, #ffffff) !important;
+  }
+}
+
+// Reaccommodate table status colors
+.cls-change {
+  color: #227EA9;
+}
+
+.cls-abort {
+  color: #F68643;
+}
+
+.cls-notification {
+  color: #9757FE;
+}
+
+.cls-awaiting {
+  color: #F8CB44;
+}
+
+.cls-reaccommodate {
+  color: #35B057;
+}
+
+.cls-cancelled {
+  color: #FF5555;
+}
+
+.cls-dark-grey {
+  color: var(--t-common-dark-grey-color);
+}
+
+.cls-grey {
+  color: var(--t-common-grey-color);
+}
+
+.cls-grey-lite {
+  color: var(--t-common-grey-color-md);
+}
+
+// Table dropdown button bg and text color
+.ant-dropdown {
+  .ant-table-filter-dropdown {
+    button {
+      color: var(--t-btn-primary-color);
+      font-size: 12px;
+    }
+  }
+}
+
+.ant-picker {
+  &.ant-picker-middle {
+    width: 157px;
+    padding-right: 7px;
+  }
+  &:hover {
+    .ant-picker-clear {
+      vertical-align: 0px;
+      path {
+        fill: var(--ant-color-error);
+      }
+    }
+    .ant-picker-input {
+      .ant-picker-suffix {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.ant-btn-primary:not(.cls-primary-btn) {
+  border: 1px solid var(--t-common-primary) !important;
+  &:hover {
+      color: var(--t-common-primary) !important;
+  }
+}
+
+.responsive {
+  display: none;
+  width: 50%;
+}
+
+.relative {
+  position: relative;
+}
+
+.res-only {
+  display: none;
+}
+
+.cls-breadcrumbSeparator {
+  &::before {
+      color: var(--t-breadcrumb-separator-color);
+      transform: rotate(-90deg);
+      display: inline-block;
+      font-size: 9px;
+      font-weight: bold;
+      margin-block-start: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px){
+  .ant-picker-dropdown {
+    position: fixed;
+    width: 100%;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--ant-color-bg-mask);
+    }
+    .ant-picker-panel-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 10px 10px 0 0;
+      .ant-picker-panel-layout {
+        justify-content: center;
+        .ant-picker-date-panel {
+          width: 100%;
+        }
+      }
+    }
+  }  
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+  .res-only {
+    display: inline-block;
+  }
+  .hide-res-only {
+    display: none;
+  }
+}

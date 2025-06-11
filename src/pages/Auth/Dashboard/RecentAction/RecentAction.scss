@@ -1,0 +1,28 @@
+
+.cls-RA-header{
+    color: #3B446C;;
+    padding-bottom: 15px;
+}
+.cls-table {
+    // height: 395px;
+    // overflow: auto;
+    .ant-table {
+        // border: 1px solid red;
+        // border-radius: 10px;
+        // height: 400px;
+        thead{
+            th{
+                font-size: 12px;
+                font-family: 'InterBold';
+            }
+        }
+        tbody{
+            .ant-table-cell{
+                // td{
+                    // border: 1px solid red;
+                    font-size: 12px;
+                // }
+            }
+        }
+    }
+}

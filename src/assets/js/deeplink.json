@@ -1,0 +1,212 @@
+[
+    {
+      "route_id": 86,
+      "path": "/planB",
+      "layout": "PlanBLayout",
+      "component": "PlanB",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 88,
+      "path": "/scoreSettings",
+      "layout": "HomeLayout",
+      "component": "ScoreSettings",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 89,
+      "path": "/adhoc",
+      "layout": "HomeLayout",
+      "component": "PnrList",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 90,
+      "path": "/policy",
+      "layout": "HomeLayout",
+      "component": "Policy",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 91,
+      "path": "/createPolicy",
+      "layout": "HomeLayout",
+      "component": "CreatePolicy",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 92,
+      "path": "/flightDisruption",
+      "layout": "HomeLayout",
+      "component": "FlightDisruption",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 93,
+      "path": "/queueSettings",
+      "layout": "HomeLayout",
+      "component": "QueueSettings",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 94,
+      "path": "/queueSettings/:action/:id",
+      "layout": "HomeLayout",
+      "component": "QueueSettingsOperations",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 95,
+      "path": "/searchFlight",
+      "layout": "HomeLayout",
+      "component": "SearchFlight",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 96,
+      "path": "/addSSR",
+      "layout": "HomeLayout",
+      "component": "FlightView",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 97,
+      "path": "/flightChange/reviewflight",
+      "layout": "HomeLayout",
+      "component": "ReviewFlight",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 98,
+      "path": "/upcomingEvents",
+      "layout": "HomeLayout",
+      "component": "UpcomingEvents",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 99,
+      "path": "/editProfile",
+      "layout": "HomeLayout",
+      "component": "EditProfile",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 100,
+      "path": "/adhoc",
+      "layout": "HomeLayout",
+      "component": "AdhocDisruptionList",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 101,
+      "path": "/reaccommodation",
+      "layout": "HomeLayout",
+      "component": "Reaccommodation",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 170,
+      "path": "/comingSoon",
+      "layout": "HomeLayout",
+      "component": "ComingSoon",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 181,
+      "path": "/viewPnrInfo",
+      "layout": "HomeLayout",
+      "component": "ViewPnrInfo",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 182,
+      "path": "/login",
+      "layout": "HomeLayout",
+      "component": "Login",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 188,
+      "path": "/planB",
+      "layout": "PlanBLayout",
+      "component": "PlanB",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 195,
+      "path": "/reviewflight",
+      "layout": "HomeLayout",
+      "component": "ReviewFlight",
+      "default": 0,
+      "permission": [
+        "all"
+      ]
+    },
+    {
+      "route_id": 163,
+      "path": "/dashboard",
+      "layout": "HomeLayout",
+      "component": "Dashboard",
+      "default": 1,
+      "permission": [
+        "all"
+      ]
+    }
+  ]

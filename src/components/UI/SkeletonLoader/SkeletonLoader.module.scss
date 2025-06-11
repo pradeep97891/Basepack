@@ -1,0 +1,25 @@
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+.menu-label {
+  margin: 10px 0;
+  width: 75%;
+  height: 13px;
+  border-radius: 10px;
+}
+.menu-img {
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 50%;
+}

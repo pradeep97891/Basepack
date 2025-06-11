@@ -1,0 +1,177 @@
+.cls-lightgray {
+  color: var(--t-common-grey-color);
+  font-family: var(--font-regular);
+}
+.cls-fontweight-500 {
+  font-weight: 500;
+}
+.bordered-row {
+  padding: 12px 0px 20px;
+  border-bottom: 1px dashed #ccc;
+}
+.cls-flight-route-container {
+  align-items: center;
+  gap: 2px;
+
+  .cls-flight-duration-div {
+    svg {
+      vertical-align: middle;
+    }
+  }
+  .cls-travel-point {
+    color: var(--dark-grey);
+  }
+}
+.cls-highlight {
+  color: var(--t-viewPnr-depart-time-color);
+  background-color: var(--t-viewPnr-depart-time-bg);
+  padding: 8px 5px;
+  font-size: 15px;
+  font-family: var(--font-bold);
+}
+.cls-action {
+  &.cls-accept, &.cls-cancel, &.cls-modify {
+    margin: 15px 0;
+    padding: 0px 20px 7px;
+  }
+
+  &.cls-accept {
+    padding-right:10px;
+    border: 1px solid var(--t-viewPnr-accept-color) !important;
+  }
+
+  &.cls-cancel {
+    border: 1px solid var(--t-viewPnr-decline-color) !important;
+  }
+
+  &.cls-modify {
+    border: 1px solid var(--t-viewPnr-modify-color) !important;
+  }
+
+  .cls-accept-span, .cls-cancel-span, .cls-modify-span {
+    padding: 0px 10px;
+    margin-left: -20px;
+    color: var(--t-viewPnr-tag-text-color);
+    border-bottom-right-radius: 5px;
+  }
+   
+  .cls-accept-span {
+    content: "Accepted";
+    background-color: var(--t-viewPnr-accept-color);
+  }
+
+  .cls-cancel-span {
+    content: "Cancelled";
+    background-color: var(--t-viewPnr-decline-color);
+  }
+
+  .cls-modify-span {
+    content: "Modified";
+    background-color: var(--t-viewPnr-modify-color);
+  }
+}
+.ant-picker {
+  border-color: #F2F2F2;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000008;
+  padding-left: 7px;
+  .ant-picker-input {
+    flex-direction: row-reverse;
+    gap: 10px;
+    input { 
+      font-family: var(--font-regular);
+      width: 78px;
+      color: var(--t-common-primary);
+    }
+  }
+}
+
+.cls-flight-duration {
+  color: var(--primary-text);
+}
+
+.cls-pnrlistv1-2 {
+  &:has(.cls-action.cls-accept), &:has(.cls-action.cls-cancel), &:has(.cls-action.cls-modify) {
+    .cls-heading {
+      padding-inline: 20px 10px;
+    }
+  }
+  .ant-picker .ant-picker-input {
+    svg {
+      path {
+        stroke: var(--t-viewPnr-schedule-change-bg);
+      }
+    }
+  }
+  .cls-stop {
+    width: 35%;
+    background-color: var(--t-viewPnr-stop-strip-bg);
+    color: var(--t-viewPnr-stop-strip-text-color);
+    padding: 6px;
+    font-size: 13px;
+    font-family: var(--font-regular);
+    border-radius: 50px;
+    margin: 20px auto 0px;
+  }
+  .cls-trip {
+    text-transform: uppercase;
+    font-family: var(--font-medium);
+    font-size: 12px;
+  }
+  .ant-alert {
+    padding-block: 10px;
+    margin: 20px 0 0;
+  }
+  .ant-alert-message {
+    font-size: 12px;
+    font-family: var(--font-regular);
+    text-align: justify;
+    span.fs-16 {
+      padding-bottom: 3px;
+    }
+    span {
+      color: var(--t-review-flight-info-msg-text-color);
+    }
+    &::before{
+      content: "\e948";
+      padding-right: 7px;
+      font-size: 13px;
+      font-family: "InfiFdIcons";
+      color: var(--t-common-primary);
+      display: inline-block;
+      vertical-align: -1px;
+      position: absolute;
+      padding-top: 1px;
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 991px){
+  .cls-itineraryListMain {
+    .cls-depDate, .cls-disruptionStatus {
+      position: absolute;
+      top: -27px;
+      left: 0;
+    }
+    .cls-disruptionStatus {
+      right: 0;
+      left: unset;
+    }
+    .cls-highlight {
+      background-color: unset;
+      padding: 0;
+      color: var(--ant-color-text);
+      font-size: 12px;
+      font-family: var(--font-semibold);
+    }
+    .cls-customModifyRow {
+      justify-content: flex-start;
+      .cls-radio-group {
+        label {
+          margin: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+}

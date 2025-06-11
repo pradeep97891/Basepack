@@ -1,0 +1,101 @@
+
+.cls-message {
+  .cls-message-title {
+    padding-right: 25px;
+    line-height: 17px;
+    font-size: 14px;
+    color: var(--text-light-black);
+    pointer-events: auto;
+  }
+  .ant-collapse .ant-collapse-item .ant-collapse-header {
+    padding: 0px;
+  }
+  .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding: 12px 16px 0px 0px;
+  }
+}
+
+.cls-modal {
+  top: 10%;
+  left: 31%;
+  border-radius: 5px;
+  .ant-modal-content {
+    margin-left: 0px;
+    border-radius: 5px;
+    .ant-modal-header {
+      font-size: 18px;
+      font-weight: 500;      
+      border-bottom: 0px;
+      border-radius: 5px;
+      .ant-modal-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--t-common-primary);
+      }
+    }
+    .ant-modal-body {
+      padding: 0px 0px 0px 2px;
+      padding-right: 2px;
+    }
+    .ant-modal-close:has(.cls-close-icon) {
+      position: absolute;
+      top: 17px;
+      .cls-close-icon {
+        font-size: 20px;
+        color: var(--t-common-grey-color-md);
+      }
+    }
+    .cls-modal-body {
+      height: 340px;
+      display: flex;
+      overflow-y: scroll;
+      .ant-empty {
+        align-self: center;
+        width: 100%;
+        height: fit-content;
+      }
+    }
+    .ant-modal-footer {
+      border: 0px;
+
+      .cls-mark-as-read {
+        font-size: 14px;
+        color: #2280d7;
+        padding: 10px 9px;
+      }
+      .ant-divider {
+        margin: 8px 0px;
+      }
+    }
+  }
+}
+
+.cls-profile-picture {
+  padding: 0px 13px 0px 15px;
+}
+.cls-pnr-body {
+  padding-right: 20px;
+  font-size: 14px;
+  color: var(--text-light-black);
+}
+.cls-message-received-time {
+  font-size: 10px;
+  padding: 5px 0px;
+  color: #99a4ac;
+}
+.cls-message-body-box {
+  font-size: 12px;
+  padding: 10px;
+  padding-right: 25px;
+  background-color: #f3f7fb;
+}
+.cls-message-body {
+  color: var(--text-light-black);
+}
+.cls-not-read {
+  font-weight: bold;
+  color: var(--text-black);
+}
+.cls-screen-expand-collapse {
+  color: var(--theme-login-input-text-color);
+}

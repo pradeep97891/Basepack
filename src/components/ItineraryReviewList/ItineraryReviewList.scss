@@ -1,0 +1,139 @@
+.cls-review-list {
+  border-radius: 5px;
+  background-color: var(--ant-color-bg-container);
+
+  &:empty {
+    display: none;
+  }
+
+  .cls-accept-span,
+  .cls-cancel-span,
+  .cls-modify-span {
+    padding: 0px 10px;
+    margin-left: 0px;
+    color: var(--t-viewPnr-tag-text-color);
+    border-bottom-right-radius: 5px;
+  }
+
+  .cls-accept-span {
+    content: "Accepted";
+    background-color: var(--t-viewPnr-accept-color);
+  }
+
+  .cls-cancel-span {
+    content: "Cancelled";
+    background-color: var(--t-viewPnr-decline-color);
+  }
+
+  .cls-modify-span {
+    content: "Modified";
+    background-color: var(--t-viewPnr-modify-color);
+  }
+
+}
+
+.cls-accept-border {
+  border: 1px solid var(--t-viewPnr-accept-color);
+}
+
+.cls-cancel-border {
+  border: 1px solid var(--t-viewPnr-decline-color);
+}
+
+.cls-modify-border {
+  border: 1px solid var(--t-viewPnr-modify-color);
+}
+
+.bordered-row {
+  padding: 12px 0px 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.cls-flight-route-container {
+  align-items: baseline;
+  gap: 2px;
+
+  .cls-flight-duration {
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .cls-travel-point {
+    color: var(--dark-grey);
+  }
+}
+
+.ant-alert-info {
+  border: none;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .cls-itineraryReviewList {
+    .ant-row {
+      position: relative;
+
+      .ant-col {
+        &:not(.cls-depDate) {
+          padding: 0;
+        }
+
+        &.cls-depDate {
+          padding-block: 3px;
+        }
+      }
+    }
+
+    .cls-depDate,
+    .cls-disruptionStatus {
+      position: absolute;
+      top: -27px;
+      left: 0;
+    }
+
+    .cls-disruptionStatus {
+      right: 0;
+      left: unset;
+    }
+
+    .cls-trip {
+      margin-inline: 0;
+      margin-block-end: 30px;
+    }
+
+    .ant-row {
+      &:not(.cls-statusRow) {
+        padding: 0;
+        margin-inline: 8px;
+        align-items: center;
+      }
+
+      &.cls-flight-route-container {
+        margin-inline: 0;
+        padding-inline: 0;
+        justify-content: center;
+
+        .cls-flight-duration {
+          margin-block-start: 3px;
+        }
+      }
+
+      .ant-row {
+        .cls-stop {
+          width: 100%;
+          margin-block-end: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .cls-itineraryReviewList {
+    .ant-row {
+      &.cls-flight-route-container {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+.airlineAK {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 200, 200, 0.5),
+      rgba(255, 220, 220, 0.5)
+    ),
+    url("../../../assets/images/Common/PlanB.webp") !important;
+}
+.airlineXY {
+  background: linear-gradient(
+      to right,
+      rgba(102, 217, 209, 0.5),
+      rgba(217, 250, 255, 0.5)
+    ),
+    url("../../../assets/images/Common/PlanB.webp") !important;
+}
+.airline6E {
+  background: -webkit-linear-gradient(
+        top,
+        rgba(38, 104, 247, 0.2),
+        rgba(24, 48, 96, 0.2)
+      )
+      fixed,
+    url("../../../assets/images/Common/PlanB.webp") !important;
+}
+.cls-planB-container {
+  margin-top: 78px;
+  height: calc(100vh - 78px);
+  min-height: 350px;
+  // position: relative;
+  background-image: linear-gradient(
+      3.67deg,
+      rgba(17, 39, 69, 0) -49.49%,
+      rgba(5, 32, 69, 0.67) 84.32%
+    ),
+    url("../../../assets/images/Common/PlanB.webp");
+  filter: grayscale(var(--t-image-greyScale));
+  background-size: cover;
+  background-position: 0% 40%;
+  background-repeat: no-repeat;
+  text-align: center;
+  .cls-planB {
+    gap: 15px;
+    .cls-description {
+      h1 {
+        font-size: clamp(22px, 4vw, 44px);
+        color: var(--t-planb-text-color);
+        font-family: var(--font-bold);
+        margin-bottom: 18px;
+      }
+      div {
+        font-size: clamp(14px, 2.2vw, 18px);
+        font-family: var(--font-semibold);
+        color: var(--t-planb-text-color);
+        padding-inline: clamp(20px, 20vw, 280px);
+        line-height: clamp(19px, 8vw, 30px);
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .cls-pnr-input-container {
+    margin-block-start: clamp(20px, 1.5vw, 30px);
+    .ant-card-body {
+      padding: 15px 25px 10px;
+      .ant-col {
+        .ant-form-item {
+          margin-block-end: 0;
+        }
+        &:has(.ant-form-item-explain-error) {
+          input {
+            border: 1px solid var(--ant-color-error);
+            background-color: var(--t-error-bg-color);
+          }
+        }
+      }
+      .ant-form-item-control-input-content {
+        .ant-input {
+          height: 47px;
+          padding: 0 20px;
+          background-color: var(--t-form-input-background-grey);
+          font-size: 14px;
+          border-radius: 5px;
+          font-family: var(--font-regular);
+          margin-bottom: 10px;
+          border-color: transparent;
+          &:focus {
+            border-color: var(--ant-input-active-border-color);
+          }
+        }
+      }
+      .ant-form-item-row {
+        flex-direction: column;
+      }
+      .ant-form-item-label {
+        padding: 0;
+        text-align: left;
+        label {
+          font-size: 16px;
+          font-family: var(--font-semibold);
+        }
+      }
+
+      .ant-form-item-explain-error {
+        text-align: left;
+        font-size: 12px;
+        color: var(--ant-color-error);
+      }
+
+      .ant-btn-primary {
+        width: clamp(160px, 100%, 219px);
+        margin: 25px 0px 0px 0px;
+        height: 46px;
+        font-size: 20px;
+        border-radius: 0px;
+        border: none;
+        font-family: var(--font-semibold);
+        box-shadow: unset;
+      }
+      .ant-btn-primary:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+/*
+Extra small devices Phones (xs <768px)	
+Small devices Tablets (sm ≥768px)	
+Medium devices Desktops (md ≥992px)	
+Large devices Desktops (lg ≥1200px)
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-planB-container {
+    margin-top: 70px;
+    height: max-content;
+    min-height: calc(100vh - 70px);
+    background-position: 60% 40%;
+    .cls-planB {
+      padding: 80px 15px 100px;
+      .cls-description {
+        .ant-typography { 
+          padding: 0;
+          font-size: 13px;
+          font-family: var(--font-medium);
+        }
+        h1 {
+          &.ant-typography { 
+            font-size: 21px;
+            padding-inline: 0;
+            font-family: var(--font-bold);
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    .cls-pnr-input-container {
+      margin-top: 5px;
+      .ant-card-body {
+        padding: 10px 0px 15px 15px;
+        text-align: left;
+        .cls-get-itinerary {
+          .cls-primary-btn {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 20px;
+          }
+        }
+        .ant-form-item-label {
+          label {
+            font-size: 14px;
+            padding-block: 7px;
+          }
+        }
+        .ant-form-item-control-input-content {
+          .ant-input {
+            height: 52px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cls-planB-container {
+    .cls-pnr-input-container {
+      .ant-card-body {
+        .ant-row {
+          justify-content: center;
+          .cls-primary-btn {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

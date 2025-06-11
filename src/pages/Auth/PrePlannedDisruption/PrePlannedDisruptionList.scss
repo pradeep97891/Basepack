@@ -1,0 +1,31 @@
+.cls-disruption-list {
+  padding: 20px 30px 40px;
+
+  .cls-advertisement-container{
+    .cls-upcoming-event-container {
+      margin-block-start: 0;
+      margin-block-end: 20px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-disruption-list {
+    .cls-personalized-filter {
+      .cls-filter-dropdown {
+        margin-inline-end: 0;
+        button {
+          margin-inline-end: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .cls-disruption-list {
+    .cls-advertisement-container{
+      margin-block-start: 40px;
+    }
+  }
+}

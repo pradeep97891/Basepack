@@ -1,0 +1,13 @@
+@each $family in InterBold, InterExtraBold, InterBlack, InterLight, InterExtraLight, 
+InterMedium, InterSemiBold, InterRegular, InterThin, OpenSansBold, OpenSansRegular, OpenSansSemiBold,RobotoBold, RobotoMedium,RobotoRegular {
+    @font-face {
+      font-family: #{$family};
+      src: url('../fonts/#{$family}/#{$family}.eot');
+      src: url('../fonts/#{$family}/#{$family}.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/#{$family}/#{$family}.woff') format('woff'),
+           url('../fonts/#{$family}/#{$family}.ttf') format('truetype'),
+           url('../fonts/#{$family}/#{$family}.svg##{$family}') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+}

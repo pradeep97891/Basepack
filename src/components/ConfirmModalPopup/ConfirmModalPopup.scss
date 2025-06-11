@@ -1,0 +1,70 @@
+.cls-confirm-popup {
+  border-radius: 4px;
+
+  .cls-close-modal-icon {
+    font-size: 20px;
+    color: var(--t-common-grey-color-md);
+  }
+  
+  .cls-popup-header {
+    font-size: 23px;
+    font-family: var(--font-semibold);
+    color: var(--t-header-text-color);
+    font-weight: unset;
+  }
+  .ant-modal-content {
+    border-radius: 4px;
+  }
+  .cls-icon {
+    top: 15px;
+  }
+  .cls-btn {
+    margin-top: 5px;
+  }
+  .ant-modal-close {
+    top: 10px;
+    right: 10px;
+  }
+  .cls-modal-header {
+    font-family: var(--font-semibold);
+    font-size: 12px;
+  }
+  .cls-modal-body {
+    text-align: center;
+    color: var(--t-common-grey-color-md);
+    font-size: 19px;
+    font-family: var(--font-regular);
+    border-radius: 4px;
+    line-height: 24px;
+  }
+  .cls-modal-btn {
+    font-size: 18px;
+    font-family: var(--font-medium);
+    padding: 6px 15px;
+    height: unset;
+    border-radius: 4px;
+    &.ant-btn-primary {
+      color: var(--t-score-setting-btn-active-text-color);
+      border: 1px solid transparent;
+    }
+  }
+  .ant-form-item-explain-error {
+    color: var(--t-common-grey-color-md);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+  .cls-confirm-popup {
+    .ant-modal-content {
+      padding-inline: 10px;
+    }
+    .cls-popup-header {
+      font-size: 20px;
+      font-family: var(--font-medium);
+    }
+    p {
+      font-size: 15px;
+      font-family: var(--font-regular);
+    }
+  } 
+}

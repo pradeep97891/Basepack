@@ -1,0 +1,32 @@
+.cls-paymentPage {
+    padding: 30px;
+    .ant-radio-group {
+        width: 100%;
+    }
+    .ant-radio-button-wrapper {
+        width: 100%;
+        display: block;
+        text-align: left;
+        padding-block: 15px;
+        border-radius: 7px;
+        height: max-content;
+        border-left: 5px solid;
+        margin-bottom: 15px;
+        background-color: var(--t-header-background);
+        border-color: var(--t-common-grey-color-md);
+        color: var(--t-header-text-color);
+        &::before {
+            width: 0px;
+        }
+        &.ant-radio-button-wrapper-checked {
+            border-color: var(--t-common-primary);
+            background-color: var(--t-header-background);
+            color: var(--t-common-primary);
+        }
+        .ant-card-body {
+            padding-block: 20px;
+            font-size: 15px;
+            font-family: var(--font-regular);
+        }
+    }
+}

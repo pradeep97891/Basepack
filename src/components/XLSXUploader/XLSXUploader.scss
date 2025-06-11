@@ -1,0 +1,12 @@
+.ant-upload-wrapper
+  .ant-upload-list
+  .ant-upload-list-item
+  .ant-upload-list-item-actions
+  .ant-upload-list-item-action {
+  opacity: 1;
+}
+
+.ant-upload-list-item {
+  padding: 8px;
+  background-color: var(--t-sync-pnr-modal-uploaded-file-bg-color);
+}

@@ -1,0 +1,96 @@
+.cls-pnr-sync-modal {
+  .ant-modal-title {
+    font-weight: unset;
+  }
+  .cls-modal-close-icon {
+    font-size: 20px;
+    color: var(--t-common-grey-color-md);
+  }
+  .ant-modal-content {
+    border: 1px;
+    border-radius: 0;
+    padding: 20px 30px 18px;
+
+    .cls-dropdown-arrow {
+      color: var(--t-common-grey-color-md);
+    }
+
+    .ant-tabs-nav {
+      margin-bottom: 20px;
+      .ant-tabs-tab {
+        font-size: 14px;
+        font-family: var(--font-medium);
+        // color: var(--t-common-grey-color);
+        font-weight: 500;
+        padding-block-end: 5px;
+        &.ant-tabs-tab-active {
+          // color: var(--t-pnr-sync-tab-active-text-color);
+        }
+      }
+
+      .ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          // color: var(--t-common-secondary);
+        }
+      }
+
+      .ant-tabs-ink-bar-animated {
+        // background: var(--t-pnr-sync-tab-active-text-color);
+      }
+    }
+
+    .ant-tabs-content-holder {
+      .ant-tabs-content {
+        .ant-upload-drag {
+          .ant-upload-btn {
+            padding: 0;
+          }
+          .cls-upload-hint {
+            color: var(--t-common-grey-color-md);
+          }
+
+          .cls-drag-icon {
+            font-size: 28px;
+            color: var(--t-common-primary);
+          }
+        }
+      }
+
+      .cls-queue-input {
+        height: 40px;
+        width: 100%;
+        border-color: var(--t-common-grey-color-md);
+        background-color: var(--ant-modal-content-bg);
+        .ant-select-selector {
+          border-color: var(--t-common-grey-color-md);
+        }
+      }
+
+      .ant-form-item-label {
+        text-align: start;
+        label {
+          font-size: 16px;
+          font-family: var(--font-medium);
+        }
+      }
+    }
+
+    .cls-primary-btn, .cls-secondary-btn {
+      padding: 6px 20px; 
+      font-size: 16px;
+    }
+
+    .ant-modal-footer {
+      display: none;
+    }
+  }
+  .ant-upload-drag {
+    border: 1px dashed var(--t-common-primary);
+  }
+
+  .cls-download-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}

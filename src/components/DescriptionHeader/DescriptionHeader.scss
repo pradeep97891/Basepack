@@ -1,0 +1,122 @@
+.cls-headerTitle {
+  &.cls-max-width {
+    max-width: 900px;
+  }
+  &.cls-before-login {
+    padding: 0px;
+  }
+  .cls-header-left {
+    .cls-title-head {
+      margin: 0px 0px 4px 0px;
+      font-size: 24px;
+    }
+  }
+
+  .cls-heading {
+    margin-bottom: 5px;
+  }
+
+  .cls-description {
+    color: var(--t-header-description);
+  }
+
+  p {
+    font-size: 13px;  
+  }
+  
+
+  .cls-pnr-section {
+    text-align: right;
+    h1 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px 0px 4px 0px;
+    }
+    .cls-pnr-text {
+      margin: 0px 0px 1px 0px;
+      white-space: nowrap;
+      font-size: 13px;
+      color: var(--t-common-layout-grey-color);
+      font-family: var(--font-regular);
+      .cls-pnr-code {
+        font-family: var(--font-bold);
+        padding-left: 3px;
+        margin-bottom: 3px;
+      }
+    }
+    span {
+      display: inline-block;
+      color: var(--t-descriptionHeader-description);
+    }
+  }
+}
+
+.ant-tooltip {
+  &:has(.cls-description-tooltip) {
+    max-width: 35%;
+    .ant-tooltip-inner{
+      padding: 10px 15px;
+      background-color: var(--t-header-background);
+    }
+    .ant-tooltip-arrow{
+      &::before {
+        background-color: var(--t-header-background);
+      }
+    }
+    .cls-description-tooltip {
+      color: var(--t-header-text-color);
+      line-height: 18px;
+      display: inline-block;
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .cls-description-header {
+    .cls-headerTitle {
+      .cls-pnr-section {
+        text-align: left;
+        .ant-row {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .cls-description-header {
+    .cls-headerTitle {
+      margin-block-end: 5px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .cls-description-header {
+    .cls-headerTitle {
+      margin-block-end: 10px;
+      .cls-heading {
+        font-size: 18px;
+        font-family: var(--font-semibold);
+        display: flex;
+        align-items: center;
+      }
+      .cls-pnr-section {
+        .cls-pnr-text {
+          white-space: unset;
+          .cls-pnr-code {
+            margin-block-end: 0;
+          }
+        }
+      }
+    }
+  }
+  .ant-tooltip {
+    &:has(.cls-description-tooltip) {
+      max-width: 70%;
+    }
+  } 
+}

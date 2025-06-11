@@ -1,0 +1,24 @@
+.ant-card-body {
+  padding: 10px 24px;
+}
+.cls-footer-center {
+  padding: 15px 0px 15px 10px;
+
+  .ant-btn-default {
+    border-color: var(--ant-primary-color);
+    color: var(--ant-primary-color);
+  }
+  .ant-btn-default:active,
+  .ant-btn-default:focus {
+    color: #fff;
+    background-color: var(--text-blue);
+    font-family: var(--font-semibold);
+  }
+}
+.cls-icon-center {
+  padding: 15px 0px 15px 10px;
+}
+.cls-line {
+  margin-top: -3px;
+  margin-right: -22px;
+}

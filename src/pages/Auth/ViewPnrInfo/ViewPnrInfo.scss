@@ -1,0 +1,666 @@
+.cls-flightchange-row {
+  padding: 30px;
+  background: var(--ant-layout-body-bg);
+  &:has(.cls-before-login) {
+    padding-top: 100px;
+  }
+  .cls-flight-card-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-block-end: 12px;
+    & > :nth-child(2) {
+      opacity: 0.7;
+      color: var(--pnr-sec-title-color);
+    }
+  }  
+  .cls-original-flights-header {
+    margin-block-start: 17px;
+
+    & > :nth-child(2) {
+      button {
+        color: var(--t-form-input-error);
+        font-size: 12px;
+        text-decoration: underline;
+        padding: 0px;
+        &.ant-btn-link:not(:disabled):not(.ant-btn-disabled):active,&.ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
+          color: var(--t-form-input-error);
+        }
+      }
+    }
+  }
+
+  .cls-suggested-flights-header {
+    margin-block-start: 30px;
+  }
+  .cls-header-left {
+    h1 {
+      margin: 0px 0px 4px 0px;
+      font-size: 24px;
+      color: var(--t-common-primary);
+    }
+    p {
+      font-size: 13px;
+      color: #000;
+      margin: 0px;
+    }
+  }
+
+  .cls-pnr-section .ant-row {
+    justify-content: end;
+    .cls-pnr-text {
+      color: var(--t-viewPnr-pnr-text-color);
+      font-size: 13px;
+      font-family: var(--font-regular);
+      h3 {
+        color: var(--t-common-primary);
+      }
+      .cls-dob {
+        color: var(--t-descriptionHeader-description);
+      }
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  .cls-bg-radio-reschedule {
+      background-color: var(--t-viewPnr-rebooked-flight-card-bg);
+  }
+  .cls-radio-reschedule {
+    // margin: 10px 0px;
+    .ant-radio-inner:after {
+      background-color: var(--t-common-primary);
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: var(--t-common-primary);
+      background-color: var(--t-viewPnr-rebooked-flight-bg);
+    }
+    .ant-radio-checked {
+      color: var(--t-common-primary);
+    }
+    .ant-radio-checked:after,
+    .ant-radio-input:focus + .ant-radio-inner,
+    .ant-radio-wrapper:hover .ant-radio-inner,
+    .ant-radio:hover .ant-radio-inner {
+      border-color:var(--t-common-primary);
+    }
+    .ant-card-bordered {
+      border-radius: 12px;
+      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.04);
+    }
+    .ant-card-body {
+      padding: 15px;
+    }
+  }
+  .cls-cancel-pnr {
+    .ant-btn-link {
+      color: #f3385a;
+    }
+    .ant-btn-link > span {
+      text-decoration: underline;
+    }
+  }
+
+  .cls-edit-btn,
+  .cls-footer-btn {
+    margin-block-start: 10px;
+    height: 54px;
+    padding: 0px 24px;
+    .ant-btn-primary {
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      font-weight: 500;
+      border-radius: 6px;
+      background-color: var(--t-viewPnr-schedule-change-bg);
+    }
+  }
+
+  .cls-edit-btn {
+    .ant-btn-primary {
+      background-color: transparent;
+      color: var(--t-common-primary);
+      border: 1px solid var(--t-common-primary);
+    }
+  }
+
+  .cls-footer-btn {
+    & > span {
+      width: 100%;
+      height: 100%;
+    }
+
+    .ant-btn-primary {
+      font-family: var(--font-regular);
+      &:hover {
+        background: var(--ant-color-primary-hover);
+        color: var(--t-viewPnr-schedule-change-bg) !important;    
+      }
+      &.cls-bg-btn {
+        background: var(--t-viewPnr-apply-btn-bg);
+        color: var(--t-viewPnr-apply-btn-text-color) !important;
+        &:hover {
+          background: var(--t-viewPnr-apply-btn-hover-bg);
+          color: var(--t-viewPnr-apply-btn-hover-text-color) !important;
+          border-color: var(--t-viewPnr-apply-btn-hover-text-color) !important;
+        }
+      }
+    }
+
+    // .btn-anim {
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   -webkit-transform: translateZ(0);
+    //   transform: translateZ(0);
+    //   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    //   -webkit-backface-visibility: hidden;
+    //   backface-visibility: hidden;
+    //   -moz-osx-font-smoothing: grayscale;
+    //   position: relative;
+    //   -webkit-transition-duration: 0.3s;
+    //   transition-duration: 0.3s;
+    //   -webkit-transition-property: transform;
+    //   transition-property: transform;
+    //   width: 170px;
+    //   height: 54px;
+    //   font-size: 18px;
+    //   font-family: var(--font-medium);
+    //   background-color: var(--t-common-primary);
+    //   color: var(--t-btn-primary-color);
+    //   transition: background-color 1s;
+
+    //   &::before {
+    //     pointer-events: none;
+    //     position: absolute;
+    //     z-index: -1;
+    //     content: '';
+    //     top: 100%;
+    //     left: 5%;
+    //     height: 10px;
+    //     width: 90%;
+    //     opacity: 0;
+    //     background: -webkit-radial-gradient(center, ellipse, #0000002b 0%, #0000 80%);
+    //     background: radial-gradient(ellipse at center, #0000002b 0%, #0000 80%);
+    //     -webkit-transition-duration: 0.3s;
+    //     transition-duration: 0.3s;
+    //     -webkit-transition-property: transform, opacity;
+    //     transition-property: transform, opacity;
+    //   }
+
+    //   &:hover, &:focus, &:active {
+    //     background-color: var(--t-common-primary);
+    //     color: var(--t-btn-primary-color);
+    //     &::before {
+    //       opacity: 1;
+    //       -webkit-transform: translateY(5px);
+    //       transform: translateY(5px);
+    //     }
+    //   }
+    
+    
+    // }
+
+    .ant-tooltip-inner {
+      color: none;
+    }
+  }
+}
+
+.cls-fight-change {
+  padding: 5px;
+  position: relative;
+  padding-block-end: 30px;
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.cls-cancelpnr-modal, .cls-login-modal {
+  .ant-modal-content {
+    border-radius: 4px;
+    box-shadow: var(--t-viewPnr-cancel-modal-boxshadow);
+    background-color: #fff;
+    & .ant-modal-close{
+      &-x{
+        font-size: 10px;
+      }
+    }
+  }
+  .ant-modal-body {
+    padding: 35px 24px;
+    height: 520px;
+    &:has(.cls-modal){
+      height: unset;
+    }
+  }
+  
+  .ant-modal-footer {
+    display: none;
+  }
+}
+
+.cls-pnr-history {
+  .ant-btn {
+    padding: 0px;
+    color: #4d65cd;
+    margin-top: 12px;
+  }
+}
+.cls-remark {
+  .ant-input {
+    border-radius: 6px;
+    background-color: #f2faff;
+  }
+}
+
+.cls-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+.cls-heading-color {
+  color: var(--t-common-primary);
+}
+.cls-radio-reschedule {
+  .cls-login-info {
+    color: var(--refunded);
+  }
+  .cls-header-text {
+    color: var(--t-common-primary);
+    font-family: var(--font-regular);
+  }
+  .ant-radio-inner {
+    border-color: var(--t-common-primary);
+  }
+  .ant-radio-inner:after {
+    background-color: var(--t-common-primary);
+  }
+  .ant-radio-checked .ant-radio-inner {
+    border-color: var(--t-common-primary);
+  }
+  .ant-radio-checked {
+    color: var(--t-common-primary);
+  }
+  .ant-radio-checked:after,
+  .ant-radio-input:focus + .ant-radio-inner,
+  .ant-radio-wrapper:hover .ant-radio-inner,
+  .ant-radio:hover .ant-radio-inner {
+    border-color: var(--check-box-color);
+  }
+  .cls-description-text {
+    color: var(--t-viewPnr-rebooked-flight-card-text);
+    font-size: 12px;
+    font-style: italic;
+    font-family: var(--font-regular);
+  }
+  .ant-card-bordered {
+    border-radius: 12px;
+    border-color: var(--t-viewPnr-rebooked-flight-card-bdr-color);
+    margin: 10px 0px;
+  }
+  .ant-card-body {
+    padding: 15px;
+  }
+
+  .cls-disabled .ant-radio-wrapper {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .cls-disabled .ant-radio-input {
+    cursor: not-allowed;
+  }
+
+  .cls-disabled .ant-radio-inner {
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+  }
+}
+.cls-rebooked-col {
+  border: 1px solid var(--t-common-primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: var(--t-viewPnr-rebooked-flight-bg);
+  border-left: 9px solid var(--t-common-primary);
+  box-shadow: 2px 6px 25px 0px #0000001A;
+}
+.cls-login-modal {
+  .ant-modal-content {
+    padding:0px;
+  }
+  .ant-modal-body {
+    padding: 0px;
+  }
+}
+.cls-pnrlistv1-1{
+  border-radius: 5px;
+  padding: 20px 25px 0px;
+  background-color: var(--t-reassign-list-bg);
+  border:1px solid #C8CCDE;
+  .ant-row-space-between {
+    margin: 0px;
+  }
+}
+
+.cls-action {
+  &.cls-accept {
+    border: 1px solid var(--t-viewPnr-accept-color) !important;
+  }
+
+  &.cls-decline {
+    border: 1px solid var(--t-viewPnr-decline-color) !important;
+  }
+
+  &.cls-modify {
+    border: 1px solid var(--t-viewPnr-modify-color) !important;
+  }
+
+
+}
+.cls-pnrlistv1-2 { 
+  border-radius: 5px;
+  // background-color: #FFFFFF;
+  &.ant-col {
+    margin: 25px 0 0;
+  }
+  .ant-row-space-between {
+    margin: 0px;
+  }
+  .ant-picker {
+    .ant-picker-input > input {
+      &:placeholder-shown {
+        color: var(--t-common-primary);
+      }
+    }
+    .ant-picker-focused {
+      border-color: var(--t-common-primary);
+    }
+  } 
+}
+.cls-rebooked-col {
+  .cls-pnrlistv1-2 { 
+    .cls-accept-span, .cls-decline-span, .cls-modify-span {
+      padding: 0px 10px;
+      margin-left: -20px;
+      color: var(--t-viewPnr-tag-text-color);
+      border-bottom-right-radius: 5px;
+    }
+     
+    .cls-accept-span {
+      content: "Accepted";
+      background-color: var(--t-viewPnr-accept-color);
+    }
+    
+    .cls-decline-span {
+      content: "Declined";
+      background-color: var(--t-viewPnr-decline-color);
+    }
+    
+    .cls-modify-span {
+      content: "Modified";
+      background-color: var(--t-viewPnr-modify-color);
+    }
+    .cls-radio-group {
+      label {
+        border: 1px solid var(--t-common-primary);
+        border-radius: 25px;
+        padding: 4px 7px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.cls-cancelpnr-btn {
+  .ant-btn >span {
+    text-decoration: underline;
+    color: var(--t-reassign-poor);
+    &:hover {
+      color: var(--t-reassign-poor);  
+    }
+  }
+}
+.cls-btn {
+  button {
+    height: 50px;
+  }
+}
+.cls-highlight {
+  color: var(--t-viewPnr-depart-time-color);
+  background-color: var(--t-viewPnr-depart-time-bg);
+}
+
+.cls-sign-in {
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+
+.cls-cancelpnr-modal {
+  .cls-model-body {
+    color: var(--t-common-grey-color);
+  }
+  .ant-modal-close-x{
+    .cls-close-model-icon {
+      font-size: 20px;
+      color: var(--t-common-grey-color-md);
+    }
+    span {
+      &::before {
+        color: var(--t-common-grey-color-md);
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+  .ant-modal-content {
+    border-radius: 4px;
+    box-shadow: var(--t-viewPnr-cancel-modal-boxshadow);
+    background-color: var(--t-reassign-list-bg);
+    & .ant-modal-close{
+      &-x{
+        font-size: 10px;
+      }
+    }
+  }
+  .ant-modal-body {
+    padding: 0px 20px 10px;
+    height: 520px;
+    &:has(.cls-modal){
+      height: unset;
+      padding-inline: 0px;
+    }
+  }
+  .cls-modal {
+    h3 {
+      font-family: var(--font-medium);
+      font-weight: unset;
+      color: var(--t-header-text-color);
+    }
+    p {
+      line-height: 24px;
+    }
+    textarea {
+      border-radius: 2px;
+      height: 75px;
+      background-color: var(--t-viewPnr-cancel-modal-textarea-bg);
+    }
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+  [class^='cls-pnrlist']{
+    .ant-tag {
+      white-space: unset;
+      margin: 0;
+      font-size: 11px;
+    }
+    .ant-col {
+      span {
+        &.ant-tag {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .cls-flightchange-row {
+    padding: 0;
+    &:has(.cls-before-login) {
+      padding-top: 80px;
+    }
+    .cls-original-flights-header {
+      margin-block-start: 0;
+    }
+    .cls-flight-card-header {
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .cls-trip {
+      margin-block: 10px 7px;
+    }
+    .bordered-row {
+      padding-block: 15px;
+    }
+    .cls-pnrlistv1-1 {
+      padding: 0 10px;
+      .cls-heading {
+        display: none;
+      }
+    }
+    .cls-pnrlistv1-2 {
+      .ant-row {
+        align-items: center;
+        justify-content: center;
+      }
+      .cls-stop {
+        width: max-content;
+        padding: 2px 20px 4px;
+        margin-block: 12px;
+        font-size: 12px;
+      }
+    }
+    .cls-suggested-flights-header {
+      margin-block-start: 20px;
+    }
+    .cls-rebooked-col {
+      border-left: 3px solid var(--t-common-primary);
+      padding: 3px 8px;
+      span {
+        font-size: 12px;
+        font-family: var(--font-medium);
+      }
+    }
+    .cls-radio-reschedule {
+      .ant-card-body {
+        padding: 7px 12px;
+      }
+      .cls-description-text {
+        font-size: 11px;
+        text-align: justify;
+      }
+      .ant-radio-wrapper {
+        margin: 2px 5px 5px;
+        span {
+          font-family: var(--font-regular);
+        }
+      }
+    }
+    .cls-pnrlistv1-2 {
+      margin: 10px 0px;
+      .ant-row {
+        margin: 0;
+      }
+      .cls-dateRow {
+        justify-content: flex-end;
+        input {
+          font-size: 13px;
+        }
+      }
+    }
+    .cls-action {
+      &.cls-accept, &.cls-cancel, &.cls-modify {
+        padding: 0 5px;
+        margin: 0 -3px;
+        .cls-statusRow {
+          justify-content: flex-start;
+          margin: 0 0 10px 0;
+          .cls-accept-span, .cls-modify-span, .cls-cancel-span {
+            margin-inline-start: -5px;
+          }
+        }
+      }
+    }
+    .ant-picker{
+      &.ant-picker-middle {
+        width: 150px;
+      }
+    }
+    .cls-footer-btn {
+      height: 42px;
+    }
+  }
+  
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  .cls-login-modal {
+    .ant-modal-content {
+      .ant-modal-close-x {
+        font-size: 18px;
+      }
+    }
+    .cls-logo-anchor {
+      margin: auto;
+      img {
+        width: 210px;
+        max-width: unset;
+        height: unset;
+      }
+    }
+    .cls-modal-height {
+      margin-block-start: -20px;
+      h1 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    form {
+      &.ant-form {
+        .ant-form-item {
+          input {
+            font-size: 14px;
+          }
+          button {
+            &.ant-btn {
+              height: 48px;
+              span {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .cls-rememberRow {
+          &.ant-row {
+            margin-block: 10px 30px;
+          }
+          span {
+            font-size: 14px;
+          }
+          .forgot {
+            .ant-btn-link {
+              span {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

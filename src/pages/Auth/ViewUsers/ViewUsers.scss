@@ -1,0 +1,51 @@
+.cls-view-users {
+    .cls-list-count {
+        color: var(--t-submenu-hover-text-color);
+    }
+    button {
+        &.ant-switch {
+            height: 22px;
+            line-height: 22px;
+            border-radius: 100px !important;
+            &:hover {
+                box-shadow: none;
+            }
+        }
+        &.ant-switch-checked {
+            background-color: var(--t-common-primary);
+            .ant-switch-handle {
+                left: calc(100% - 20px);
+            }
+        }
+        .ant-switch-inner {
+            .ant-switch-inner-checked,
+            .ant-switch-inner-unchecked {
+                font-size: 12px;
+                font-family: var(--font-medium);
+            }
+            .ant-switch-inner-unchecked {
+                margin-top: -22px;
+            }
+        }
+        .ant-switch-handle {
+            position: absolute;
+            transition: all .2s ease-in-out;
+            height: 18px;
+            left: 2px;
+            top: 2px;
+            width: 18px;
+            &::before {
+                background-color: var(--t-header-background);
+                border-radius: 9px;
+                bottom: 0;
+                box-shadow: 0 2px 4px 0 rgba(0, 35, 11, .2);
+                content: "";
+                left: 0;
+                right: 0;
+                top: 0px;
+                position: absolute;
+                transition: all .2s ease-in-out;
+            }
+        }
+    }
+}

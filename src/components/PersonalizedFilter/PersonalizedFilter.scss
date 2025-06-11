@@ -1,0 +1,221 @@
+.cls-personalized-filter {
+  .Infi-Fd_11_FilterMenu {
+    color: var(--text-white);
+  }
+
+  .cls-filter-dropdown {
+    padding: 0 !important;
+    margin-inline-end: 10px;
+
+    svg {
+      margin-block-start: 1px;
+    }
+
+    .ant-btn-primary:hover {
+      background-color: var(--t-common-primary);
+    }
+  }
+
+  .cls-applied-filters {
+    margin-block-start: 3px;
+  }
+
+  .cls-applied-filter-card {
+    border-radius: 25px;
+
+    button {
+      height: fit-content;
+    }
+
+    .ant-card-body {
+      padding: 2px 10px;
+    }
+    .cls-close-mark {
+      color: var(--ant-color-error);
+      font-weight: 800;
+      cursor: pointer;
+    }
+  }
+}
+
+.cls-dropdown {
+  $padding: 15px;
+  height: 400px;
+  overflow-y: auto;
+  overflow-y: -webkit-scrollbar;
+  form {
+    box-shadow: 0px 3px 12px 0px #00000019;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--t-scroll-color);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--t-scroll-background);
+  }
+
+  .ant-card-body {
+    padding: 0;
+
+    .cls-filter-header {
+      padding-inline: $padding;
+      box-shadow: 0px 2px 2px 0px #00000017;
+      .cls-goBack{
+        display: none;
+      }
+    }
+
+    .cls-filters {
+      padding-inline: 18px;
+      .cls-new-filter {
+        color: var(--t-common-grey-color);
+      }
+      .ant-select {
+        min-width: 200px;
+      }
+
+      .ant-col.ant-form-item-label {
+        padding-block-end: 2px;
+      }
+
+      label {
+        font-size: 12px;
+        // padding-block-end: 4px;
+      }
+
+      .ant-select-selector {
+        // border: 0.1px solid #00000024;
+        border: none;
+        box-shadow: 0px 1px 3px 0px #00000024;
+        border-radius: 20px;
+        padding-inline: 15px;
+        font: 13px / 19px var(--font-regular);
+      }
+
+      .cls-more-items-collapse{
+          .ant-collapse-header{
+            padding: 0;
+            padding-block-end: 10px;
+            justify-content: end;
+            color: var(--t-common-primary);
+
+            .ant-collapse-expand-icon{
+              padding-inline-end: 5px;
+            }
+
+            .ant-collapse-header-text{
+              width: 80px;
+              margin: 0;
+              flex: none;
+            }
+          }        
+          .ant-collapse-content-box{
+            
+            padding: 0;
+          }
+      }
+    }
+
+    .cls-saved-filter {
+      .ant-select-selector {
+        border: 1px solid var(--t-common-primary);
+      }
+      .ant-col {
+        label {
+          font-size: 14px;
+          font-family: var(--font-medium);
+          color: var(--t-common-primary);
+        }
+      }
+    }
+
+    .ant-form-item {
+      margin: 0;
+    }
+    
+    .cls-more-filter{
+      margin-block-end : 10px
+    }
+    .ant-dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+
+      .ant-dropdown-menu-item {
+        padding: 0;
+        &:hover {
+          background-color: unset;
+        }
+      }
+
+      .ant-dropdown-trigger {
+        width: 100%;
+        border-radius: 20px;
+        padding-inline: 15px;
+        font: 13px / 19px var(--font-regular);
+      }
+    }
+  }
+}
+
+.ant-dropdown {
+  &:has(.cls-dropdown) {
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+  }
+}
+
+
+
+@media (min-width:320px) and (max-width:576px)
+{
+.ant-dropdown{
+  &:has(.cls-dropdown) {
+
+    position: fixed !important;
+    top: 0px !important;
+    width: 100%;
+    height: 100%;
+
+  .cls-dropdown{
+    height: 100vh;
+    .ant-card-body{
+      .ant-form{
+        .cls-filter-header{
+          .cls-goBack{
+            rotate: 180deg;
+            display: inline-block;
+            margin-inline-end: 10px;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+        .cls-filters{
+          .cls-submit{
+            margin-top: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+.ant-modal-wrap{
+  z-index: 10;
+  &:has(.cls-save-fliter-modal)
+  {
+    .ant-modal{
+    width: 90% !important;}
+  }
+}
+}

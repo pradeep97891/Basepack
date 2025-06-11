@@ -1,0 +1,976 @@
+.cls-searchFlightMain {
+  .cls-flight-row {
+    display: none;
+  }
+
+  &.cls-skeleton {
+    .ant-card-body {
+      padding: 15px;
+    }
+  }
+
+  &:has(.cls-confirmed-flight),
+  &:has(.cls-selected-row) {
+    .cls-flight-row {
+      display: block;
+    }
+  }
+
+  .cls-status {
+    text-transform: capitalize;
+  }
+
+  .cls-flight-no {
+    max-width: 25%;
+
+    svg {
+      margin-left: -5px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .fade-card {
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+
+    &.fade {
+      min-height: 170px;
+      max-height: 850px;
+
+      .ant-picker {
+        display: inline-block;
+      }
+    }
+
+    .ant-picker {
+      display: none;
+    }
+
+    .cls-one-trip {
+      .ant-picker {
+        display: inline-block;
+      }
+    }
+  }
+
+  .fade-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fade-card-front,
+  .fade-card-back {
+    // position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s, visibility 0.8s;
+  }
+
+  .fade-card.fade .fade-card-front {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .fade-card.fade .fade-card-back {
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 30px 15px;
+    height: max-content;
+  }
+
+  .fade-card-front {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cls-collapse {
+    border-radius: 6px;
+    border: unset;
+    margin-block: 10px;
+    background-color: var(--t-search-flight-collapse-bg);
+
+    &.cls-collapse-bdr {
+      border: 1px dashed #133769;
+    }
+
+    .ant-collapse-header {
+      padding: 5px 10px;
+    }
+
+    .ant-collapse-item {
+      .ant-collapse-content-box {
+        padding-inline: 10px;
+      }
+    }
+  }
+
+  .cls-head-content {
+    height: 84px;
+    padding: 10px 30px 15px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--t-search-flight-header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:has(.cls-other-trips) {
+      padding-inline-start: 0;
+    }
+
+    &.fade-card-back {
+      opacity: 0;
+      visibility: hidden;
+      height: 0px;
+      padding: 0px;
+    }
+
+    .cls-modify-calender {
+      margin-left: 20px;
+      height: 40px;
+      width: 180px;
+      background-color: var(--t-search-flight-modify-collapse-datepicker-bg);
+      border: 1px solid var(--t-search-flight-modify-collapse-datepicker-bdr);
+      padding-block: 8px;
+
+      .ant-picker-input {
+        flex-direction: row-reverse;
+        gap: 0px;
+
+        .ant-picker-suffix {
+          margin: -3px 10px 0px 0px;
+        }
+
+        input {
+          font-size: 14px;
+          font-family: var(--font-semibold);
+          padding-top: 1px;
+          color: var(--t-search-flight-modify-collapse-text-color);
+
+          &::placeholder {
+            color: var(--t-search-flight-modify-collapse-text-color);
+          }
+        }
+      }
+
+      span {
+        &::before {
+          font-size: 20px;
+        }
+      }
+    }
+
+    span {
+      color: var(--t-search-flight-modify-collapse-text-color);
+    }
+
+    &.fade-card-back {
+      .ant-typography {
+        color: var(--t-search-flight-modify-collapse-text-color);
+      }
+    }
+
+    .cls-head-col-1 {
+      padding-block: 11px 14px;
+      display: flex;
+
+      .cls-trip-container {
+        .ant-radio-group {
+          &>.ant-radio-button-wrapper:first-child {
+            padding-inline-start: 0;
+          }
+
+          &>.ant-radio-button-wrapper:last-child {
+            border: none;
+          }
+
+          .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+            box-shadow: none;
+          }
+
+          .ant-radio-button-wrapper {
+            background-color: var(--reschedule-primary-color);
+            color: #9db5d1;
+            border: none;
+            height: 100%;
+            line-height: 18px;
+            padding: 0 30px;
+            border-inline-end: 1px dashed #9db5d1;
+            cursor: default;
+
+            &:focus-within {
+              box-shadow: none;
+            }
+
+            &::before {
+              display: none;
+            }
+
+            &.ant-radio-button-wrapper-checked {
+              color: var(--text-white);
+            }
+          }
+        }
+
+        .ant-row {
+          flex-direction: column;
+        }
+      }
+    }
+
+    h4 {
+      color: var(--text-white);
+    }
+
+    .cls-btn-col {
+      button {
+        height: 38px;
+      }
+
+      .ant-btn-primary {
+        border-radius: 3px;
+        background-color: var(--t-search-flight-header-btn-bg);
+        border: none;
+        box-shadow: unset;
+
+        span {
+          color: var(--t-viewPnr-apply-btn-hover-bg);
+        }
+      }
+    }
+
+    .cls-border-right {
+      border-right: 1px dashed #9db5d1;
+    }
+
+    .cls-other-trips {
+      padding: 0 0 0 30px;
+      color: var(--t-search-flight-header-text-color);
+      display: flex;
+      flex-direction: column;
+      height: 60px;
+      span {
+        color: var(--t-search-flight-header-text-color);
+      }
+    }
+
+    .cls-inactive {
+      opacity: 0.6;
+    }
+  }
+
+  .cls-modify-fl {
+    margin: 25px 30px 0px;
+
+    .cls-search-flight {
+      .ant-card {
+        border-radius: 10px;
+      }
+
+      .ant-card-body {
+        padding: 15px;
+      }
+
+      .ant-btn-default {
+        font-size: 12px;
+        border-radius: 4px;
+      }
+
+      .ant-btn-default:active,
+      .ant-btn-default:focus {
+        color: #fff;
+        background-color: var(--text-blue);
+        font-family: var(--font-semibold);
+      }
+
+      .ant-btn-link .ant-btn-sm {
+        color: #1886d9;
+      }
+
+      span {
+        color: #aaaaaa;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: var(--check-box-color);
+        border-color: var(--check-box-color);
+      }
+
+      .ant-checkbox-checked:after,
+      .ant-checkbox-input:focus+.ant-checkbox-inner,
+      .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+      .ant-checkbox:hover .ant-checkbox-inner {
+        border-color: var(--check-box-color);
+      }
+
+      .ant-slider-track {
+        background-color: var(--text-blue);
+      }
+
+      .ant-slider-handle {
+        border: 2px solid var(--text-blue);
+      }
+    }
+
+    .cls-next-btn {
+      background-color: var(--reschedule-primary-color);
+      border: none;
+      color: var(--text-white);
+      font-size: 18px;
+    }
+
+    .cls-selected-flights-container {
+      position: relative;
+      height: 100%;
+      padding-block-end: 18px;
+
+      &>div {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 85px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .cls-back-btn {
+    button {
+      span {
+        color: var(--t-viewPnr-apply-btn-bg);
+      }
+    }
+
+    .ant-btn {
+      font-style: italic;
+      padding: 0px;
+      gap: 0px;
+
+      svg {
+        height: 10px;
+      }
+    }
+  }
+}
+
+.cls-modify-trip-btn {
+  border: 1px solid var(--text-white);
+  border-radius: 4px;
+  padding: 2px 10px;
+
+  .ant-btn-text {
+    padding: 0px;
+    color: var(--text-white);
+  }
+}
+
+.cls-modify-from-btn {
+  border: 1px solid var(--text-white);
+  border-radius: 4px;
+  padding: 2px 10px;
+
+  .ant-select {
+    width: 95%;
+  }
+
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    padding: 0px;
+    height: 29px;
+    background-color: var(--reschedule-primary-color);
+    border: none;
+    color: var(--text-white);
+  }
+
+  .ant-select-focused .ant-select-selector,
+  .ant-select-selector:focus,
+  .ant-select-selector:active,
+  .ant-select-open .ant-select-selector {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+  }
+}
+
+.cls-modify-modal-btn {
+  .ant-btn-primary {
+    height: 32px;
+    background-color: var(--t-common-primary);
+    color: var(--t-btn-primary-color);
+    border-color: var(--text-white);
+    border-radius: 4px;
+    margin-top: 25px;
+  }
+}
+
+.cls-modify-datepicker {
+  border: 1px solid var(--text-white);
+  border-radius: 4px;
+  padding: 2px 10px;
+
+  .ant-picker {
+    border: none;
+    padding: 4px 0px;
+    background-color: var(--reschedule-primary-color);
+  }
+
+  .ant-picker-focused {
+    border-color: none;
+    box-shadow: none;
+    border-right-width: 0px;
+    outline: 0;
+  }
+
+  .ant-picker-input>input {
+    color: var(--text-white);
+  }
+
+  .anticon {
+    color: var(--text-white);
+  }
+}
+
+.cls-add-city-btn {
+  .ant-btn {
+    padding: 0px;
+    color: var(--text-white);
+  }
+}
+
+.cls-opactiy {
+  opacity: 0.8;
+}
+
+.cls-selected-flight {
+  .cls-flightlist-card {
+    position: sticky;
+    top: 100px;
+  }
+
+  .ant-card-body,
+  .ant-collapse-content-box {
+    padding: 12px;
+  }
+
+  .ant-collapse-content {
+    border: 0px;
+  }
+
+  .cls-stops {
+    color: #2280D7;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .cls-searchFlightMain {
+    .cls-searchFlight {
+      .cls-btn-col {
+        padding-inline-start: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .cls-searchFlightMain {
+    .cls-head-content {
+      padding: 8px 12px;
+      height: max-content;
+      .cls-searchFlightHeader {
+        overflow-x: auto;
+      }
+      .cls-other-trips {
+        height: auto;
+        min-width: 125px;
+        &:first-child {
+          padding-inline: 0px 15px;
+          min-width: 95px;
+        }
+        padding-inline: 20px;
+        span {
+          line-height: 1.4;
+        }
+      }
+      .cls-btn-col {
+        position: absolute;
+        right: 5px;
+        top: 16px;
+        button {
+          height: 30px;
+        }
+      }
+    }
+    .cls-collapse {
+      .ant-collapse-header {
+        padding: 0 7px;
+        .ant-col {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: right;
+          .cls-date {
+            padding-inline-start: 7px;
+            margin-block-start: 2px;
+          }
+          &.cls-status {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+
+    .fade-card {
+      &.fade {
+        .fade-card-back {
+          display: block;
+          position: fixed;
+          top: 0;
+          z-index: 100;
+          height: 100vh;
+          padding: 0;
+          background-color: var(--t-btn-primary-color);
+          overflow-y: auto;
+          span {
+            color: var(--t-header-text-color);
+            &.p-clr {
+              color: var(--t-common-primary);
+            }
+          }
+          .ant-col {
+            padding: 8px 15px 0;
+            .ant-col {
+              padding: 0;
+            }
+          }
+          .ant-picker {
+            display: block;
+            background-color: unset;
+            padding: 7px;
+            margin-block-start: 10px;
+            margin-inline-start: 0;
+            height: 37px;
+            input {
+              color: var(--t-header-text-color);
+              font-size: 13px;
+            }
+          }
+          .cls-modify-btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            border-top: 2px solid var(--t-menu-border);
+            text-align: center;
+            .cls-primary-btn {
+              width: 35% !important;
+              span {
+                font-size: 14px;
+                font-family: var(--font-medium);
+                color: var(--t-btn-primary-color);
+              }
+            }
+          }
+          .cls-single-trip {
+            display: inline-block;
+            padding-inline-end: 10px;
+            span {
+              padding-inline: 5px;
+            }
+          }
+          .cls-modify-title {
+            padding: 17px 5px;
+            border: 2px solid var(--t-menu-border);
+            span {
+              color: var(--t-common-primary);
+              padding-inline-end: 7px;
+            }
+            .cls-icon {
+              transform: rotate(90deg);
+              display: inline-block;
+              padding: 0 4px 0 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .cls-modify-fl,
+    .cls-searchFlight {
+      margin: 5px 12px 0;
+      flex-direction: column-reverse;
+    }
+
+    .cls-searchFlight {
+      margin-block: 0px;
+    }
+
+    .cls-back-btn {
+      margin-bottom: 0;
+      .ant-btn {
+        font-style: normal;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .cls-filterOpenIcon {
+      padding: 15px 5px;
+      background: var(--t-common-primary);
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      position: fixed;
+      inset-inline-end: 0px;
+      top: 34%;
+      cursor: pointer;
+      z-index: 5;
+      color: var(--t-btn-primary-color);
+      font-size: 22px;
+      box-shadow: 0px 3px 5px 0px #0000002C;
+
+      &:hover {
+        background: var(--t-common-primary);
+        color: var(--t-btn-primary-color);
+      }
+    }
+
+    .cls-selected-flight {
+      padding-inline: 0;
+      margin-block-end: 15px;
+
+      .cls-flightlist-card {
+        background-color: transparent;
+        box-shadow: unset;
+
+        .ant-collapse {
+          box-shadow: var(--ant-box-shadow-tertiary);
+          background-color: var(--ant-color-bg-container);
+        }
+      }
+
+      .ant-card-body {
+        padding: 0;
+      }
+    }
+
+    .cls-flight-card {
+      .cls-arrival-day {
+        top: 0;
+      }
+      .cls-more-detail-div {
+        .cls-duration-stops {
+          svg {
+            width: 52px;
+          }
+
+          span {
+            &:last-child {
+              margin-inline-start: 4px;
+            }
+          }
+        }
+      }
+
+      .ant-card-body {
+        padding: 12px 6px 0;
+      }
+
+      .cls-flight-col {
+        padding-inline: 0;
+        padding-inline-end: 0px;
+        border-right: unset;
+
+        &::before {
+          top: -13px;
+          left: -20px;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          border-right: 2px dashed var(--t-menu-border);
+          height: 75%;
+          position: absolute;
+          right: 10%;
+          top: 9px;
+        }
+
+        .cls-deal-strip {
+          top: -13px;
+          left: -7px;
+          padding: 0px 8px 0 12px;
+        }
+      }
+
+      .cls-time-date {
+        &.cls-depart {
+          padding-inline-start: 0px;
+        }
+      }
+
+      .cls-stop-col {
+        .cls-origindesti {
+          left: unset;
+        }
+
+        .cls-flight-icon {
+          &::before {
+            width: 40px;
+          }
+        }
+
+        .cls-stop {
+          top: -2px;
+          right: calc(100% - 51px);
+          width: max-content;
+        }
+      }
+    }
+
+    .cls-btn-col {
+      padding-inline-start: 20px;
+      text-align: right;
+
+      button {
+        width: max-content;
+        padding: 3px 5px;
+        margin-inline-start: auto;
+
+        span {
+          font-size: 13px;
+          font-family: var(--font-medium);
+        }
+      }
+
+      .cls-seatLeft {
+        position: absolute;
+        bottom: -27px;
+        width: max-content;
+        right: 0;
+        height: 20px;
+      }
+    }
+
+    .cls-flight-collapse {
+      &.ant-collapse {
+        margin-block-start: 25px;
+
+        .ant-collapse-item {
+          .ant-collapse-header {
+            top: 69px;
+          }
+
+          .ant-collapse-content {
+            .ant-collapse-content-box {
+              padding: 8px;
+              margin-block-end: 8px;
+
+              .cls-more-detail-div {
+                padding-inline: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-drawer {
+    &:has(.cls-filter-component) {
+      .ant-drawer-body {
+        padding: 0;
+      }
+      .cls-filterCloseIcon {
+        padding: 10px 12px;
+        background: var(--t-common-primary);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        position: fixed;
+        top: 34%;
+        transform: translateX(-35px);
+        cursor: pointer;
+
+        span {
+          color: var(--t-btn-primary-color);
+          font-size: 11px;
+        }
+      }
+
+      .cls-filter-header {
+        padding: 12px 7px;
+        width: 100%;
+        border-bottom: 2px solid var(--t-menu-border);
+
+        .ant-row {
+          display: flex;
+          justify-content: space-between;
+
+          .ant-col {
+            display: flex;
+            align-items: center;
+
+            .cls-filter-icon {
+              font-size: 17px;
+              color: var(--t-common-primary);
+              margin-inline: 8px;
+            }
+
+            .cls-filter-title {
+              font: 16px / 22px var(--font-semibold);
+              color: var(--t-common-primary);
+              vertical-align: super;
+            }
+
+            .cls-reset-button {
+              font: 13px / 19px var(--font-regular);
+              padding-inline: 0px;
+              span {
+                color: var(--t-common-primary);
+              }
+            }
+          }
+        }
+      }
+
+      .cls-filter-btm {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid var(--t-menu-border);
+      }
+    }
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .cls-searchFlightMain {
+    .cls-searchFlight {
+      .cls-flight-card {
+        .cls-stop-col {
+          .cls-origindesti {
+            left: unset;
+          }
+
+          .cls-flight-icon {
+            &::before {
+              width: 80px;
+            }
+          }
+
+          .cls-stop {
+            right: calc(100% - 67px);
+            width: max-content;
+          }
+        }
+
+        .cls-btn-col {
+          button {
+            padding: 3px 15px;
+          }
+
+          .cls-seatLeft {
+            font-family: var(--font-medium);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .cls-searchFlightMain {
+    .cls-flight-card {
+      .cls-flight-col{
+        .text-ellipsis {
+          padding-inline-end: 8px;
+        }
+      }
+      span {
+        font-size: 12px !important;
+      }
+      .cls-stop-col {
+        span {
+          font-size: 11px !important;
+        }
+        .cls-stop {
+          top: 0;
+        }
+      }
+    }
+    .cls-collapse {
+      span, div {
+        font-size: 12px !important;
+        .ant-collapse-header {
+          .ant-col {
+            .cls-date {
+              margin-block-start: 0;
+            }
+          }
+        }
+      }
+    }
+    .fade-card {
+      &.fade {
+        .fade-card-back {
+          .ant-col {
+            .ant-col {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  .cls-searchFlightMain {
+    .cls-flight-card {
+      .cls-flight-col{
+        .text-ellipsis {
+          padding-inline-end: 20px;
+        }
+        &::after {
+          right: 17%;
+        } 
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-flight-card {
+    .ant-card-body {
+      padding: 12px;
+      .cls-secondary-btn {
+        span {
+          font-size: 13px;
+        }
+      }
+      .cls-stop-col {
+        .cls-flight-icon {
+          &::before {
+            width: 90px;
+          }
+        }
+      }
+      .cls-more-detail {
+        span {
+          font-size: 12px;
+        }
+        button {
+          gap: 4px;
+        }
+        .cls-arrow {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

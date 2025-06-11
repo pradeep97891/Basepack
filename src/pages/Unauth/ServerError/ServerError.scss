@@ -1,0 +1,66 @@
+.cls-server-error-container {
+  height: 100vh;
+  width: 100vw;
+  background: var(--page-background);
+
+  &> :first-child {
+    text-align: center;
+  }
+
+  .cls-image-con {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 85px;
+
+    .cls-image {
+      background: url("../../../assets/images/server-error.jpg") no-repeat;
+      width: 495px;
+      height: 300px;
+    }
+  }
+
+  .cls-heading {
+    color: var(--t-common-primary);
+    font-family: var(--font-semibold);
+    font-size: 28px;
+  }
+
+  .cls-help-text {
+    color: var(--t-common-primary);
+    margin-bottom: 50px;
+  }
+
+  .cls-login-btn {
+    color: var(--t-common-primary);
+  }
+}
+
+.cls-pagenotfound-header {
+  height: 78px;
+  padding-inline: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--background);
+  z-index: 1;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+@media (min-width:320px) and (max-width:768px) {
+  .cls-server-error-container {
+    width: 100%;    
+    .cls-image-con {
+      width: 100%;
+      .cls-image {
+        object-fit: cover;
+      }
+    }
+    .cls-heading {
+      font-size: 20px;
+    }
+    .ant-list,.ant-flex{
+      margin-inline: 20px;
+    }
+  }
+
+}

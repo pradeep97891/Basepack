@@ -1,0 +1,56 @@
+.cls-disrupted-pnr-list {
+  margin-top: 10px;
+  border-radius: 11px;
+  
+  .cls-primary-btn-inverted {
+    font-size: 18px;
+    font-family: var(--font-medium);
+    padding: 7px 35px;
+    border: unset;
+  }
+  .ant-space-item:has(.Infi-Fd_04_DropdownArrow) {  
+    margin-block-end: 4px;
+  }
+  & > :first-child {
+    border-block-end: 1px solid var(--t-common-grey-color-lt);
+  }
+  .cls-list-count {
+    font-family: var(--font-medium);
+  }
+  .cls-view-btn {
+    &.ant-btn-text {
+      &:hover {
+        border: 1px solid var(--t-common-primary);
+        background-color: var(--t-header-background);
+      }
+    }
+    &::before {
+      color: var(--t-common-primary);
+    }
+    span {
+      font-family: var(--font-regular);
+      font-size: 13px;
+      padding-left: 5px;
+      vertical-align: middle;
+      color: var(--t-common-primary);
+    }
+  }
+  .cls-action-dropdown {
+    margin-right: 35px;
+  }
+  .cls-cancelled {
+    svg {
+      width: 13px;
+      margin-top: 6px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-disruption-list{
+    padding: 0px !important;
+    .ant-table-selection-column {
+      display: none;
+    }
+  }
+}

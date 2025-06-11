@@ -1,0 +1,283 @@
+.Login {
+  .ant-row {
+    &:has(.ant-checkbox-wrapper):not(.ant-form-item-row) {
+      margin-top: 20px;
+    }
+  }
+  .ant-col {
+    .ant-input-password {
+      // margin-top: 20px;
+    }
+    .ant-form-item-label {
+      display: none;
+    }
+    label {
+      &:not(.ant-checkbox-wrapper) {
+        display: none;
+      }
+    }
+    .ant-form-item {
+      margin-block-end: 0;
+    }
+    &:has(.ant-form-item-explain-error) {
+      input,
+      .ant-input-password {
+        background-color: var(--t-error-bg-color);
+      }
+      .cls-login-psw-section {
+        input {
+          border: unset;
+        }
+      }
+      .ant-input-status-error {
+        background-color: var(--t-error-bg-color);
+      }
+    }
+    .cls-login-psw-section {
+      input {
+        background-color: transparent;
+      }
+    }
+    .ant-form-item-explain-error {
+      font-size: 14px;
+      color: var(--ant-color-error);
+    }
+    .ant-input-status-error {
+      background-color: var(--t-error-bg-color);
+    }
+    .ant-form-item-explain {
+      position: absolute;
+    }
+  }
+  &.ant-form {
+    margin-top: 32px;
+  }
+  .ant-form-item-label {
+    .ant-form-item-required {
+      color: var(--label-color);
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--t-autofill-text-color) !important;
+    -webkit-box-shadow: 0 0 0 30px var(--ant-color-bg-container) inset !important;
+  }
+  .cls-login-label {
+    margin-bottom: 20px;
+    .ant-input-affix-wrapper {
+      background-color: var(--theme-login-input-text);
+      // border-color: var(--theme-login-input-text-border);
+      input {
+        background-color: var(--theme-login-input-text);
+        color: var(--theme-login-input-text-color);
+      }
+    }
+  }
+
+  .cls-password-input-container {
+    margin-block-end: 0;
+  }
+
+  span.cls-login-psw-section,
+  .ant-input-affix-wrapper {
+    margin-block-start: 20px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-color: var(--t-login-input-border-color);
+  }
+
+  span.cls-login-psw-section {
+    input {
+      height: unset;
+      font-family: var(--font-semibold);
+      background: transparent;
+    }
+  }
+
+  .ant-form-item .ant-form-item-explain-error {
+    font-family: var(--font-regular);
+  }
+
+  .cls-email-input {
+    height: unset;
+    padding: 15px 20px;
+    font-family: var(--font-semibold);
+    border-color: var(--t-login-input-border-color);
+  }
+
+  .ant-input-affix-wrapper,
+  .ant-row {
+    .ant-input {
+      color: var(--t-login-input-color);
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    color: var(--t-common-grey-color);
+    font-size: 13px;
+    font-weight: normal;
+    font-family: var(--font-regular);
+  }
+
+  .ant-input-affix-wrapper .link span {
+    font-size: 13px !important;
+    font-weight: normal !important;
+  }
+
+  .remember {
+    margin-top: 7px;
+  }
+
+  .ant-checkbox-inner:after {
+    top: 45%;
+  }
+
+  .forgot {
+    .ant-btn-link {
+      font-family: var(--font-regular);
+      span {
+        font-size: 14px;
+        font-family: var(--font-regular);
+        font-weight: normal;
+        color: var(--t-common-primary);
+      }
+    }
+  }
+  .cls-login-btn {
+    margin-bottom: 20px;
+    .ant-btn-primary {
+      font-family: var(--font-bold);
+      background: var(--t-btn-primary-background-color);
+      border: unset;
+      box-shadow: unset;
+      color: var(--t-btn-primary-color);
+      &:hover {
+        background: var(--t-btn-primary-inverted-background-color) !important;
+        color: var(--t-btn-primary-color) !important;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+    .ant-btn-default {
+      border: 1px solid var(--t-login-otp-btn-border) !important;
+      &:hover {
+        & span {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      span {
+        background: var(--t-btn-primary-background-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: var(--font-semibold);
+      }
+    }
+    .cls-login-otp-btn {
+      background-color: var(--t-autofill-bg-color);
+    }
+  }
+}
+.cls-sm-col {
+  text-align: center;
+}
+.cls-socialmedia {
+  font-family: var(--font-regular);
+  display: inline-block;
+  position: relative;
+  color: var(--t-header-text-color);
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    background: #dcdcdc;
+    top: 50%;
+    position: absolute;
+    left: -110%;
+    height: 1px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    background: #dcdcdc;
+    top: 50%;
+    position: absolute;
+    right: -110%;
+    height: 1px;
+  }
+}
+.cls-cursor-pointer {
+  cursor: pointer;
+  text-align: center;
+}
+.ant-modal-content {
+  .ant-form-item-explain-error {
+    font-size: 12px !important;
+  }
+  .Login {
+    &.ant-form {
+      margin-top: 20px;
+    }
+    .cls-login-label {
+      margin-bottom: 10px;
+    }
+    .cls-email-input,
+    span.cls-login-psw-section,
+    .ant-input-affix-wrapper {
+      padding: 10px;
+      font-size: 12px;
+    }
+    .ant-checkbox-wrapper {
+      font-size: 12px !important;
+    }
+    .remember {
+      .ant-form-item {
+        margin-bottom: 10px;
+      }
+    }
+    .forgot {
+      // margin-bottom: 10px;
+      .ant-btn-link {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .cls-login-btn {
+      margin-bottom: 15px;
+      [class^="ant-btn"] {
+        height: 32px;
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+    .cls-socialmedia {
+      margin-block: 15px;
+      font-size: 13px;
+    }
+    .cls-cursor-pointer {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.cls-forgot-psw-header {
+  display: none;
+  border: 1px solid red;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-socialmedia {
+    color: var(--t-common-grey-color-md);
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

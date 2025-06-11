@@ -1,0 +1,49 @@
+.cls-selected-flight {
+  border: none;
+  border-bottom: 1px dashed #d3d3d3;
+  .ant-card-bordered {
+    border-radius: 4px;
+  }
+  .ant-card-body {
+    padding: 10px;
+    padding-block-end: 20px;
+  }
+  .cls-destination-origin {
+    padding: 12px;
+    margin-top: 8px;
+    background-color: var(--t-search-flight-collapse-bg);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+
+    .cls-cancelled {
+      color: var(--refunded);
+    }
+
+    .cls-date {
+      margin-top: 3px;
+      font-size: 12px;
+      color: #666666;
+    }
+  }
+  .cls-flight-details {
+    padding: 0px 12px;
+    margin-top: 10px;
+    .cls-flight-no {
+      margin-top: 2px;
+    }
+    .cls-hours {
+      color: #333;
+    }
+    .cls-duration {
+      display: flex;
+      align-items: center;
+      margin-inline-start: auto;
+      color: #7c7c7c;
+    }
+
+    .cls-stop {
+      color: #2280d7;
+    }
+  }
+}

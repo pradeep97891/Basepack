@@ -1,0 +1,56 @@
+.cls-table-tab-container {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+
+  .cls-dropdown {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    line-height: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: -5px 0 3px -3px #00000030;
+    z-index: 100;
+  }
+}
+
+.cls-radio-tab {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 0;
+
+  .ant-radio-button-wrapper {
+    border: none;
+    padding-inline: 10px;
+    background-color: transparent;
+    margin-inline: 5px;
+    font-family: var(--font-regular);
+
+    &::before {
+      display: none;
+    }
+
+    &.ant-radio-button-wrapper-checked {
+      color: var(--t-radio-active-color);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .ant-radio-button {
+      // padding-block-end: 10px;
+    }
+  }
+
+  .ant-radio-button-checked {
+    border-bottom: 2px solid var(--t-radio-active-color);
+  }
+}

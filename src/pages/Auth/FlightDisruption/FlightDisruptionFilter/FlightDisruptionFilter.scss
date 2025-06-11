@@ -1,0 +1,40 @@
+.cls-flight-disruption-filter-container {
+  background-color: var(--text-white);
+  padding: 20px 40px;
+  border-radius: 6px;
+  .cls-date-picker-container {
+    gap: 10px;
+    .ant-picker {
+      width: 260px;
+      height: 40px;
+      color: var(--text-blue);
+      // top: -5px;
+      border: 1px solid #f2f2f2;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+    }
+    .ant-picker-input > input::placeholder {
+      color: var(--text-blue);
+    }
+    .ant-picker-input > input:hover {
+      border-color: var(--text-blue);
+    }
+    .ant-picker-input > input {
+      font-size: 12px;
+      color: var(--text-blue);
+    }
+    .ant-picker-focused,
+    .ant-picker:hover {
+      border-color: var(--text-blue);
+    }
+    .ant-picker-suffix {
+      color: var(--text-blue);
+    }
+  }
+
+  .cls-form-btn-container {
+    button {
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.dynamic-form {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 32px 24px;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  margin-top: 24px;
+
+  .ant-input {
+    border-radius: 4px;
+  }
+  .title {
+    font-size: 24px;
+
+    &::before {
+      background: #0075cb;
+      content: ' ';
+      z-index: 99;
+      position: absolute;
+      top: 6px;
+      left: -24px;
+      width: 5px;
+      height: 28px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}
+.form-container {
+  margin-top: 16px;
+  .cls-form-legend {
+    z-index: 99;
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    border-radius: 16px;
+    padding: 4px 8px;
+    color: #fff;
+    background: #7480a2;
+    font-size: 12px;
+  }
+  .fields-container {
+    padding: 24px 24px;
+    padding-right: 36px;
+    border: 1px dashed #555555;
+    background: #f2f5f8;
+    border-radius: 6px;
+
+    .remove-icon {
+      position: absolute;
+      right: -4px;
+      top: 10px;
+      color: red;
+    }
+
+    .loading-indicator {
+      position: absolute;
+      right: 25px;
+      bottom: 11px;
+    }
+  }
+
+  .form-btns {
+    margin-top: 32px;
+  }
+
+  // validation css from login form
+  label {
+    // color: var(--label-color);
+  }
+
+  .link span {
+    // color: var(--link-color);
+    font-size: 13px !important;
+    font-weight: normal !important;
+  }
+
+  .ant-row {
+    margin-bottom: 8px;
+  }
+
+  .ant-checkbox-checked:after,
+  .ant-checkbox-input:focus + .ant-checkbox-inner,
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner {
+    // border-color: #000;
+  }
+}

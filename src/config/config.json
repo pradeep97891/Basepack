@@ -1,0 +1,19 @@
+{
+  "airline_code": "VA",
+  "accessibility_pos": "vertical",
+  "url_path_encryption" : false,
+  "currency": "USD",
+  "user_type": "AL",
+  "language": [
+    { "code": "en-US", "text": "English", "flag": "UKFlag" },
+    { "code": "hi-IN", "text": "हिंदी", "flag":"IndiaFlag" }
+  ],
+  "default_lang": "en-US",
+  "list_display_columns": 6,
+  "date_formatter": "%d-%M-%Y",
+  "time_formatter": "%d %Y",
+  "date_time_formatter": "%d-%M-%Y %H:%i %A",
+  "date_format": { "day": "2-digit", "month": "short", "year": "numeric" },
+  "time_format": { "hour12": true, "hour": "2-digit", "minute": "2-digit" },
+  "score_match_percentage": { "best": 30, "medium": 40, "least": 30}
+}

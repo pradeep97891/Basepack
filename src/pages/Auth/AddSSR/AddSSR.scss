@@ -1,0 +1,400 @@
+// .cls-addSSRMain {
+//   padding-inline: 10px;
+//   &:has(.cls-float-popup) {
+//     padding-bottom: 100px;
+//   }
+//   .cls-headerTitle {
+//     margin-bottom: 0px;
+//     .cls-heading {
+//       margin-bottom: 0px;
+//     }
+//   }
+//   ::-webkit-scrollbar {
+//     height: 5px;
+//   }
+//   ::-webkit-scrollbar-thumb:hover {
+//     background: rgb(180, 177, 177);
+//   }
+//   .cls-pnr-section {
+//     .ant-row {
+//       justify-content: flex-end;
+//     }
+//   }
+// }
+// .cls-seat-free {
+//   color: var(--hover-color);
+// }
+// .cls-seat-occupied {
+//   color: var(--hover-color);
+// }
+// .cls-seat-usd1 {
+//   color: var(--fv-seat-usd1);
+// }
+// .cls-seat-usd3 {
+//   color: var(--light-blue);
+// }
+// .cls-seat-baby {
+//   color: var(--fv-baby-seat);
+// }
+// .cls-seat-selected {
+//   color: var(--fv-select-seat);
+// }
+// .cls-food-menu {
+//   .ant-tabs-tab {
+//     margin-left: 0px;
+//   }
+// }
+// .ant-col-8,
+// .ant-col-6,
+// .ant-col-7 {
+//   button {
+//     border: none;
+//   }
+// }
+// .ant-tabs-nav-wrap {
+//   .ant-tabs-nav-list {
+//     .ant-tabs-tab {
+//       margin-left: 5px;
+//     }
+//   }
+// }
+// .ant-col-3 {
+//   .ant-badge-status {
+//     .ant-badge-status-dot {
+//       width: 10px;
+//       height: 10px;
+//       margin-left: 6px;
+//     }
+//   }
+// }
+// .cls-booking-box {
+//   border: 1px solid #dddddd;
+//   border-radius: 10px;
+// }
+// .cls-baggage-weight {
+//   border-right: 2px dashed #999999;
+// }
+// .cls-meals-list {
+//   color: var(--fv-meals-list);
+// }
+// .cls-meals-badge {
+//   border: 1px solid #5ee41c;
+//   border-radius: 5px;
+// }
+// .cls-btn-book {
+//   color: var(--text-gray);
+//   border: 1px solid #cccccc;
+//   border-radius: 5px;
+// }
+// .ant-col-8 {
+//   .ant-row {
+//     .ant-col-8,
+//     .ant-col-7 {
+//       .ant-btn {
+//         padding: 3px;
+//       }
+//     }
+//   }
+// }
+// .ant-row {
+//   .ant-col-7 {
+//     .ant-btn {
+//       padding: 5px 0px;
+//     }
+//   }
+// }
+
+// .cls-flight-header-btn {
+//   border: 1px solid #e9e9e9;
+//   border-radius: 5px;
+// }
+// .cls-addSSRLayout {
+//   background-color: #fff;
+//   box-shadow: 0px 3px 6px 0px #00000029;
+// }
+// .cls-passengers {
+//   padding-inline: 10px 15px;  
+// }
+// .cls-header-btn {
+//   .ant-btn-text {
+//     border-radius: 6px;
+//     color: var(--text-gray);
+//     font-family: var(--font-semibold);
+//     height: 36px;
+//     &.active {
+//       background-color: var(--t-common-primary);
+//       color: var(--t-link-color);
+//       .ant-btn-icon {
+//         span {
+//           color: var(--t-btn-primary-color);
+//         }
+//       }
+//     }
+//     &:hover {
+//       .ant-btn-icon {
+//         span {
+//           color: var(--ant-color-text);
+//         }
+//       }
+//     }
+//     span {
+//       padding-left: 5px;
+//       font-size: 14px;
+//       font-family: var(--font-medium);
+//     }
+//   }
+// }
+
+// .cls-flight-line {
+//   padding-top: 10px;
+//   width: 100%;
+//   height: 285px;
+//   // background: url(../../../assets/images/Common/flight_line.jpg);
+//   background: url(../../../assets/images/Common/flightindex.png);
+//   background-repeat: no-repeat;
+//   // background-size: cover;
+//   background-size: contain;
+//   margin-left: 25px;
+// }
+
+
+.cls-addSSRMain {
+  padding-inline: 10px;
+  &:has(.cls-float-popup) {
+    padding-bottom: 100px;
+  }
+  .ant-breadcrumb {
+    li {
+      margin-inline: 5px 3px;
+      &:not(.ant-breadcrumb-separator) {
+        margin: 0px;
+      }
+    }
+  }
+  .cls-headerTitle {
+    margin-bottom: 0px;
+    .cls-heading {
+      margin-bottom: 0px;
+    }
+  }
+  ::-webkit-scrollbar {
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(180, 177, 177);
+  }
+  .cls-pnr-section {
+    .ant-row {
+      justify-content: flex-end;
+    }
+  }
+  .cls-seat-free {
+    color: var(--hover-color);
+  }
+  .cls-seat-occupied {
+    color: var(--hover-color);
+  }
+  .cls-seat-usd1 {
+    color: var(--fv-seat-usd1);
+  }
+  .cls-seat-usd3 {
+    color: var(--light-blue);
+  }
+  .cls-seat-baby {
+    color: var(--fv-baby-seat);
+  }
+  .cls-seat-selected {
+    color: var(--fv-select-seat);
+  }
+  .cls-food-menu {
+    .ant-tabs-tab {
+      margin-left: 0px;
+    }
+  }
+  .ant-col-8,
+  .ant-col-6,
+  .ant-col-7 {
+    button {
+      border: none;
+    }
+  }
+  .ant-tabs-nav-wrap {
+    .ant-tabs-nav-list {
+      .ant-tabs-tab {
+        margin-left: 5px;
+      }
+    }
+  }
+  .ant-col-3 {
+    .ant-badge-status {
+      .ant-badge-status-dot {
+        width: 10px;
+        height: 10px;
+        margin-left: 6px;
+      }
+    }
+  }
+  .cls-booking-box {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+  }
+  .cls-baggage-weight {
+    border-right: 2px dashed #999999;
+  }
+  .cls-meals-list {
+    color: var(--fv-meals-list);
+  }
+  .cls-meals-badge {
+    border: 1px solid #5ee41c;
+    border-radius: 5px;
+  }
+  .cls-btn-book {
+    color: var(--text-gray);
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  .ant-col-8 {
+    .ant-row {
+      .ant-col-8,
+      .ant-col-7 {
+        .ant-btn {
+          padding: 3px;
+        }
+      }
+    }
+  }
+  .ant-row {
+    .ant-col-7 {
+      .ant-btn {
+        padding: 5px 0px;
+      }
+    }
+  }
+  
+  .cls-flight-header-btn {
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    width: max-content;
+  }
+  .cls-addSSRLayout {
+    background-color: var(--t-header-background);
+    box-shadow: 0px 3px 6px 0px #00000029;
+    height: 700px;
+  }
+  .cls-passengers {
+    padding-inline: 10px 15px;  
+  }
+  .cls-header-btn {
+    .ant-btn-text {
+      border-radius: 6px;
+      color: var(--text-gray);
+      font-family: var(--font-semibold);
+      height: 36px;
+      gap: 0px;
+      &.active {
+        background-color: var(--t-common-primary);
+        color: var(--t-add-ssr-flight-header-text-color);
+        .ant-btn-icon {
+          span {
+            color: var(--t-btn-primary-color);
+            &::before {
+              color: var(--t-add-ssr-flight-header-text-color);
+            }
+          }
+        }
+      }
+      &:hover {
+        .ant-btn-icon {
+          span {
+            color: var(--ant-color-text);
+            &::before {
+              color: var(--ant-color-text);
+            }
+          }
+        }
+      }
+      span {
+        padding-left: 5px;
+        font-size: 14px;
+        font-family: var(--font-medium);
+      }
+    }
+  }
+  
+  .cls-flight-line {
+    padding-top: 10px;
+    width: 100%;
+    height: 421px;
+    background: url(../../../assets/images/Common/flight_line.svg) no-repeat 0px center, var(--t-header-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 25px;
+  }
+  
+  .cls-addSSRskeleton {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .cls-addSSRMain {
+    padding: 0 0 20px;
+    .cls-addSSROuter {
+      .ant-col-order-1 {
+        margin: 0;
+      }
+    }
+    .cls-addSSRHeader {
+      margin: 0 0 10px;
+    }
+    .cls-addSSRLayout {
+      margin: 0;
+    }
+    .cls-flight-ele {
+      margin-inline: 12px;
+    }
+    .cls-addSSRLayout {
+      height: unset;
+    }
+    .cls-flightSeatList {
+      gap: 10px;
+      margin: 15px;
+    }
+    .cls-passengers {
+      padding-inline: 0;
+      margin-block: 0 15px;
+    }
+    .cls-flight-ele {
+      padding-block-start: 5px;
+      .cls-select-seat-pax {
+        font-size: 12px;
+        top: 35px;
+      }
+      .cls-flight-line, .cls-seat-colNum, .cls-airline-outer {
+        margin-inline-start: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-addSSRMain {
+    .cls-addSSRLayout {
+      margin-inline-end: 10px;
+      .cls-headerCol {
+        margin: 0;
+        .cls-addSSRHeadCol {
+          padding-block-end: 0;
+        }
+      }
+    }
+    .cls-flight-ele {
+      margin-block-start: 20px;
+      .cls-select-seat-pax {
+        top: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,275 @@
+.cls-itinerary-confirm {
+    .cls-confirm-page {
+        padding: 20px 50px 90px;
+        background: var(--ant-layout-color-bg-body);
+
+        .cls-pnr-info {
+            padding: 0px 90px;
+
+            .cls-main-card {
+                .ant-card-body {
+                    padding-bottom: 14px;
+                }
+            }
+        }
+
+        .ant-tag {
+            color: var(--ant-tag-default-bg);
+        }
+
+        .ant-card-bordered {
+            border: none
+        }
+
+        .cls-passenger-det {
+            .ant-card-bordered {
+                box-shadow: none !important;
+            }
+
+            .ant-card-body {
+                padding: 0px !important;
+            }
+        }
+
+        .ant-card-bordered {
+            box-shadow: 0px 4px 15px 0px #00000017;
+        }
+
+        .cls-itinerary-card {
+            .ant-card-body {
+                padding: 15px 25px !important;
+            }
+        }
+
+        .cls-qr-col {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+        }
+
+        .ant-qrcode {
+            img {
+                width: 85px;
+            }
+
+            &:has(img) {
+                padding: 25px;
+            }
+        }
+
+        .cls-itinerary-btn {
+            .ant-btn-default {
+                border-color: var(--t-common-primary);
+                color: var(--t-common-primary);
+                border-radius: 2px;
+                font-size: 18px;
+                font-family: var(--font-semibold);
+                width: 140px;
+                height: 44px;
+            }
+
+            .ant-btn-primary {
+                width: 140px;
+                height: 44px;
+                border-radius: 2px;
+                border-color: none;
+                background: var(--t-common-primary);
+                font-size: 18px;
+                font-family: var(--font-semibold);
+            }
+        }
+
+        .cls-stop {
+            width: 35%;
+            background-color: var(--t-viewPnr-stop-strip-bg);
+            color: var(--t-viewPnr-stop-strip-text-color);
+            padding: 6px;
+            font-size: 13px;
+            font-family: var(--font-regular);
+            border-radius: 50px;
+            margin: 0px auto 10px;
+        }
+
+        .cls-trip {
+            text-transform: uppercase;
+            font-family: var(--font-medium);
+            font-size: 12px;
+        }
+
+        .cls-print-card {
+            padding-inline: 0px;
+            margin-left: 15px;
+
+            &:hover {
+                background-color: var(--ant-layout-color-bg-body);
+            }
+        }
+    }
+
+    .cls-share-col {
+        // position: fixed;
+        // top: 100px;
+        // right: 89px;
+        // z-index: 100;
+        // background: #f5f5f5;
+        // padding: 10px 15px 10px 0px;
+        // border-radius: 8px;
+        padding-inline: 90px;
+        justify-content: flex-end;
+
+        button:not(.cls-print-card) {
+            padding-inline: 0px;
+            margin-left: 20px;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            svg {
+                color: var(--t-viewPnr-apply-btn-bg);
+                height: 23px;
+                width: 23px;
+            }
+        }
+
+        button {
+            svg {
+                path {
+                    fill: var(--t-viewPnr-apply-btn-bg);
+                }
+            }
+
+            span {
+                color: var(--t-viewPnr-apply-btn-bg);
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+    .cls-itinerary-confirm {
+        .cls-confirm-page {
+            background-color: var(--ant-layout-body-bg);
+            padding: 0;
+
+            .cls-itineraryReviewList {
+                border: 1px solid var(--t-login-input-border-color);
+                // padding-inline: 10px;
+                margin-block: 12px 20px;
+                border-radius: 7px;
+            }
+
+            .cls-pnr-info {
+                padding: 0;
+
+                .cls-main-card {
+                    .ant-card-body {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .cls-share-col {
+                padding-block-start: 10px;
+                padding-inline-end: 0px;
+            }
+
+            .cls-itineraryReviewList {
+                .ant-row {
+                    margin-inline: 8px;
+                    .ant-row {
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+    }
+    .cls-qrCodePopup {
+        .ant-qrcode {
+            padding: 0;
+            border: unset;
+        }
+        .ant-col {
+            button {
+                border-radius: 8px !important;
+            }
+        }
+        .cls-close-modal-icon {
+            font-size: 18px;
+            color: var(--t-common-grey-color-md);
+            margin-block-start: -5px;
+        }
+        .cls-qrContainer {
+            position: relative;
+            display: inline-block;
+            padding: 15px;
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 2px solid var(--t-common-primary);
+            }
+            &::before {
+                top: 0;
+                left: 0;
+                border-right: none;
+                border-bottom: none;
+                border-radius: 8px 0 0 0;
+            }
+            &::after {
+                top: 0;
+                right: 0;
+                border-left: none;
+                border-bottom: none;
+                border-radius: 0 8px 0 0;
+            }
+        
+            .cls-bdrBtmLeft, .cls-bdrBtmRight {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 2px solid var(--t-common-primary);
+                border-radius: 3px;
+            }
+            .cls-bdrBtmLeft {
+                border-top: none;
+                border-right: none;
+                border-radius: 0 0 0 8px;
+            } 
+            .cls-bdrBtmRight  {
+                border-top: none;
+                border-left: none;
+                border-radius: 0 0 8px 0;
+            }
+            .cls-bdrBtmLeft {
+                bottom: 0;
+                left: 0;
+                border-right: none;
+                border-top: none;
+            }
+            .cls-bdrBtmRight  {
+                bottom: 0;
+                right: 0;
+                border-left: none;
+                border-top: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .cls-itinerary-confirm {
+        .cls-confirm-page {
+            .cls-pnr-info {
+                padding: 0 30px 30px;
+            }
+            .cls-share-col {
+                padding-block-start: 20px;
+                padding-inline-end: 30px;
+            }
+        }
+    }
+}

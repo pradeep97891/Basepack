@@ -1,0 +1,172 @@
+.cls-add-ssr-btn {
+  .ant-btn-primary {
+    background-color: var(--reschedule-primary-color) !important;
+    border: var(--reschedule-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: flex;
+      gap: 3px;
+    }
+  }
+  svg {
+    filter: brightness(0) invert(1);
+  }
+}
+.cls-special-service {
+
+  .ant-card {
+    color:var(--t-common-primary);
+
+  }
+  .ant-card-bordered {
+    border: none !important;
+    box-shadow: 2px 4px 9px 0px #0000000F;
+  }
+  .ant-card-body {
+    padding: 13px 23px !important;
+    border-radius: 6px;
+    background-color: var(--t-review-flight-ssr-card-bg);
+    &:hover {
+      background-color: var(--t-review-flight-ssr-card-hover-bg);
+    }
+  }
+}
+.cls-pricesummary-collapse {
+  margin-block: 7px;
+  &.ant-collapse {
+    .ant-collapse-item {
+      .ant-collapse-content {
+        border-radius: 4px;
+        .ant-collapse-content-box {
+          padding: 0px 0px 5px;
+          background-color: var(--t-viewPnr-rebooked-flight-bg);
+        }
+      }
+      .ant-collapse-header {
+        padding: 0px;
+      }
+    }
+    .ant-collapse-header-text {
+      width: 115px;
+    }
+  }
+  .ant-collapse-expand-icon {
+    order: 2;
+    svg {
+      transform: rotate(90deg) !important;
+    }
+  }
+  .ant-collapse-item-active {
+    .ant-collapse-expand-icon {
+      svg {
+        transform: rotate(270deg) !important;
+      }
+    }
+  }
+  .ant-collapse-extra {
+    order: 3;
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 105px);
+    align-items: center;
+  }
+}
+.cls-price-summary {
+  position: sticky;
+  top: 100px;
+  height: max-content;
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+  .cls-price-summary {
+    .ant-card-bordered {
+      border: unset;
+    }
+    .cls-fareCard {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: var(--t-common-primary);
+      .ant-col {
+        &:has(.cls-secondary-btn) {
+          display: none;
+        }
+      }
+      .ant-card-body {
+        padding: 10px 15px 5px 14px;
+        .cls-title {
+          color: var(--t-btn-primary-color);
+        }
+        button {
+          color: var(--t-btn-primary-color);
+          padding-inline: 0;
+          &.cls-primary-btn {
+            padding-inline: 10px;
+            height: 45px;
+            width: 20%;
+            min-width: 95px;
+          }
+          span {
+            color: var(--t-btn-primary-color);
+          }
+        }
+      }
+    }
+  }
+  .cls-drawerFooter {
+      &.open {
+        .cls-arrow {
+          transform: rotate(180deg);
+        }
+      }  
+  }
+  .cls-special-service {
+    .ant-card-body {
+      background-color: var(--ant-layout-body-bg);
+      border: 1px solid #E2E8EF;
+    }
+  }
+  .ant-drawer {
+    &:has(.cls-fareBreakup) {
+      .ant-drawer-body {
+        background-color: var(--t-common-primary);
+        padding: 15px;
+        .ant-col {
+          color: var(--t-btn-primary-color);
+        }
+        .cls-drawerFooter {
+          margin-block-start: 20px;
+        }
+        button {
+          color: var(--t-btn-primary-color);
+          padding-inline: 0;
+          &.cls-primary-btn {
+            padding-inline: 10px;
+            height: 45px;
+            width: 20%;
+            min-width: 95px;
+          }
+          span {
+            color: var(--t-btn-primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-price-summary {
+    padding-inline-start: 20px;
+    .ant-card {
+      .ant-card-body {
+        padding: 12px;
+      }
+    }
+  }
+}

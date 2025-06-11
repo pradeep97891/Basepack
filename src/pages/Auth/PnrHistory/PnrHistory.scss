@@ -1,0 +1,163 @@
+.cls-timeline {
+  .ant-timeline {
+    .ant-timeline-item {
+      margin-inline-start: 40px;
+    }
+  }
+  .cls-white-bg {
+    background-color: #fff;
+  }
+  .cls-flight-card, .cls-flightres-card {
+    &.ant-card {
+      .ant-card-body {
+        padding: 0px;
+      }
+    }
+  }
+  .cls-flightres-card {
+    background-color: var(--t-reassign-rescheduled-flight-bg);
+  }
+  .cls-flight-card {
+    background-color: var(--t-reassign-original-flight-bg);
+  }
+  .cls-duration {
+    margin-top: -7px;
+  }
+  .cls-table-display {
+    padding-block: 10px;
+    table {
+      width: max-content !important;
+      th, td {
+        background-color: transparent;
+        border-bottom: unset;
+      }
+    }
+    .ant-table {
+      .ant-table-container {
+        .ant-table-content {
+          table {
+            .ant-table-tbody, .ant-table-thead {
+              tr:last-child {
+                td, th {
+                  padding: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cls-history-card {
+    border: unset;
+    box-shadow: 2px 4px 34px 0px #00000026;
+    .cls-card-arrow {
+      position: absolute;
+      top: 26px;
+      transform: rotate(90deg);
+      left: -15px;
+      font-size: 20px;
+      color: var(--ant-color-bg-container);
+    }
+  }
+  
+  .ant-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50% !important;
+  }
+  .ant-timeline-item-head-custom {
+    height: 0px;
+    padding: 0px;
+  }
+  .cls-timeline-col {
+    padding: 15px 25px 5px;
+  }
+  .cls-pnr-table {
+    margin-block-start: 11px;
+    .ant-table {
+      tr,
+      thead {
+        background-color: #f3f7fb !important;
+      }
+    }
+  }
+  .cls-passenger-details {
+    padding: 20px;
+    padding-block-end: 0;
+    background-color: #f3f7fb;
+    .ant-card-bordered {
+      border-radius: 6px;
+    }
+    .ant-card-body {
+      padding: 12px;
+    }
+
+    .cls-pas-details {
+      color: var(--t-review-flight-pax-detail-text-color);
+      font-size: 12px;
+    }
+
+    .cls-passenger-heading {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .cls-infoalert {
+      .ant-alert-info {
+        background-color: var(--t-review-flight-info-msg-bg);
+        border: none;
+      }
+    }
+  }
+
+  .ant-table-thead > tr > th {
+    color: #8c8d8e;
+    font-size: 13px;
+  }
+  .cls-infan .cls-border-col {
+    color: #adadad;
+  }
+  .cls-dot-timeline-extra {
+    color: #0f2245;
+    background-color: var(--ant-color-bg-container);
+  }
+  .ant-timeline-item-tail {
+    border-left: 2px dashed #c8cdf5;
+  }
+  .ant-btn-default {
+    background-color: #0C28A8;
+    color: #fff;
+  }
+  .ant-btn-dashed {
+    border: none;
+    background-color: #0C28A8;
+    color: #fff;
+  }
+
+  .cls-card-margin {
+    .cls-started {
+      .ant-card-body {
+        padding: 15px 24px;
+      }
+    }
+  }
+  .cls-table-timeline {
+    & > div {
+      position: relative;
+      .cls-queue-no {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        word-break: normal;
+      }
+    }
+
+    .ant-card-body {
+      padding: 0;
+      padding-block-start: 5px;
+    }
+  }
+}

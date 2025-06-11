@@ -1,0 +1,153 @@
+.cls-float-popup {
+    background: var(--t-header-background);
+    width: calc(100% - 89px);
+    padding: 19px 50px 20px;
+    position: fixed;
+    left: 89px;
+    bottom: 0px;
+    z-index: 10;
+    height: 85px;
+    box-shadow: 3px 0px 36px 0px #00000012;
+    svg {
+        margin-left: -5px;
+        &:first-child {
+          margin-left: 0px;
+        }
+    }
+    .cls-infoIcon {
+        &::before {
+            font-size: 22px;
+            font-weight: 600;
+            vertical-align: sub;
+            padding-left: 2px;
+            color: var(--t-common-primary);
+        }
+    }
+    .cls-dashed {
+        border-right: 1px dashed var(--t-common-grey-color);
+        height: 43px;
+    }
+    .cls-line {
+        color: var(--t-common-grey-color-md);
+        span {
+            vertical-align: -3px;
+            font-size: 18px;
+            color: var(--t-common-grey-color-md);
+        }
+    }
+    .cls-float-body {
+        align-items: center;
+        gap: 12px;
+        min-width: 234px;
+    }
+    .cls-float-popup-price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button {
+            height: 42px;
+            border-radius: 2px;
+            &.ant-btn-default {
+                color: var(--t-common-primary);
+                border-color: var(--t-common-primary);
+            }
+        }
+    }
+}
+.cls-selected-data {
+    &::-webkit-scrollbar-thumb {
+        background: var(--t-common-primary);
+    }
+}
+.ant-popover {
+    &:has(.cls-price-info-popup) {
+        .ant-flex {
+            gap: 35px;
+        }
+        .ant-popover-arrow {
+            &::before {
+                background-color: var(--t-common-primary);
+            }
+        }
+        .ant-popover-content {
+            .ant-typography {
+                color: var(--t-add-ssr-flight-header-text-color);
+              }
+            .ant-popover-inner {
+                background-color: var(--t-common-primary);
+                padding: 15px;
+            }
+            .cls-info-title {
+                background: var(--t-add-ssr-flight-header-text-color);
+                display: block;
+                color: var(--t-common-primary);
+                text-align: center;
+                border-radius: 4px;
+                padding-block: 4px;
+                font-size: 14px;
+                span {
+                    &::before {
+                        padding-inline: 7px;
+                        background-image: var(--t-common-secondary);
+                        background-size: 100%;
+                        background-clip: initial;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -moz-background-clip: text;
+                        -moz-text-fill-color: transparent;
+                    }
+                }
+            }
+            .cls-count {
+                color: var(--t-addon-popup-ssr-text-color);
+            }
+            .cls-bdr-btm {
+                border-bottom: 1px dashed var(--t-addon-popup-ssr-text-color);
+            }
+        }
+      }
+  }
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    .cls-float-popup {
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        height: unset;
+        border-radius: 8px 8px 0 0;
+        background-color: var(--t-common-primary);
+        .cls-float-body {
+            display: none;
+        }
+        .cls-float-popup-price {
+            button {
+                height: 37px;
+                span {
+                    font-size: 14px;
+                }
+                &.ant-btn-default {
+                    border-color: var(--t-btn-primary-color);
+                    color: var(--t-btn-primary-color);
+                }
+            }
+        }
+    }
+    .cls-addSSRMain {
+        .cls-float-popup {
+            .cls-dashed {
+                span {
+                    color: var(--t-header-background);
+                    &::before {
+                        color: var(--t-header-background);
+                    }
+                }
+            }
+        }
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .cls-float-popup {
+        padding-inline: 30px;
+    }
+  }

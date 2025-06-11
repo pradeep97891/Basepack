@@ -1,0 +1,15 @@
+.ant-breadcrumb {
+    font-family: var(--font-regular);
+    padding: 12px 0px 7px;
+    ol {
+        align-items: baseline;
+    }
+    li {
+        a, div {
+            font-size: 13px;
+            &:hover {
+                background-color: unset;
+            }
+        }
+    }
+}

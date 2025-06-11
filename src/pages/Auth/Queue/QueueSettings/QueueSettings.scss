@@ -1,0 +1,138 @@
+.cls-queue-box-container {
+  box-shadow: 0 0 1px var(--label-color);
+  box-sizing: border-box;
+  .filterIcon {
+    background-color: var(--reschedule-primary-color);
+    padding: 4px 8px;
+    position: absolute;
+    top: 25%;
+    right: 4%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .QueueBoxContainerFilterBox {
+    top: 7vh;
+    width: 95%;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 2px var(--footer-gray-color));
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: var(--background);
+      top: -9px;
+      right: 4%;
+      width: 15px;
+      height: 10px;
+      clipPath: polygon(50% 0, 0% 100%, 100% 100%);
+    }
+  }
+  .QueueBoxInfoBox {
+    width: 100%;
+    position: relative;
+    padding: 10px 20px;
+    min-height: 70px;
+    overflow-y: hidden;
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      margin: 0;
+      font-size: 12px;
+      font-style: italic;
+    }
+  }
+  .QueueBoxHolder {
+    min-height: 300px;
+    height: 510px;
+    overflow-y: scroll;
+  }
+
+  .QueueBoxHolder::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .EmptyQueue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+    span {
+      color: var(--text-gray);
+    }
+
+    .ant-empty-image {
+      height: 160px;
+    }
+  }
+
+  /* Track */
+  .QueueBoxHolder::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  .QueueBoxHolder::-webkit-scrollbar-thumb {
+    background-color: var(--reschedule-primary-color);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .QueueBoxHolder::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-bg);
+  }
+}
+.cls-edit-queue-container {
+  .EditQueueContainerGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    Button {
+      color: var(--ant-primary-color); 
+      border: 1px solid var(--ant-primary-color);
+      border-radius: 5px;
+      background-color: transparent;
+      justify-self: end;
+    }
+    p {
+      font-weight: 14px;
+    }
+    .EditDetails {
+      grid-column: 1 / span 2;
+    }
+  }
+}
+.cls-queue-settings {
+  padding: 30px;
+  .cls-headerTitle {
+    margin-bottom: 5px;
+  }
+}
+
+.cls-queue-skeleton {
+  .cls-breadcrumbSeparator { 
+    &::before {
+        color: var(--t-breadcrumb-separator-color);
+        transform: rotate(-90deg);
+        display: inline-block;
+        font-size: 9px;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-top: 4px;
+    }
+  }
+}
+
+@media (min-width:320px) and (max-width:767px)
+{
+.cls-queue-settings{
+  padding: 0px;
+}
+}

@@ -1,0 +1,238 @@
+.cls-adhocList {
+  padding: 20px 20px 40px;
+
+  .cls-personalized-filter {
+    flex-direction: row-reverse;
+    .cls-filter-dropdown {
+      margin-left: 12px;
+      button {
+        margin-right: 0px;
+        padding-inline: 7px;
+      }
+    }
+  }
+
+  .cls-sort-select {
+    .ant-select-selector {
+      border-radius: 13px;
+      border-color: var(--t-common-primary);
+    }
+  }
+
+  .cls-duration-left {
+    padding: 1px 5px;
+    border-radius: 3px;
+    position: absolute;
+    font-size: 12px;
+    background-color: var(--t-dashboard-remaining-time-bg);
+    top: -10px;
+    right: 25px;
+    color: var(--ant-color-error);
+    width: max-content;
+  }
+
+  
+  .cls-carousel {
+    padding-bottom: 35px;
+    width: 100%;
+    
+    .slick-slide {
+      width: 308px;
+    }
+    .ant-card-body {
+      padding: 24px 0px 10px 5px;
+    }
+
+    .cls-status {
+      background: red;
+      color: black;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      border-radius: 0px 6px 0 6px;
+      font-size: 11px;
+      font-family: var(--font-medium);
+      padding: 2px 15px;
+    }
+
+    .cls-disrupted-total,
+    .cls-reason {
+      color: var(--t-common-dark-grey-color);
+    }
+
+    .ant-progress {
+      display: flex;
+      padding: 5px 10px 5px 0px;
+    }
+
+    .ant-progress-bg {
+      height: 5px !important;
+    }
+
+    .cls-pending {
+      line-height: 15px;
+    }
+
+    .slick-arrow {
+      background-color: red;
+    }
+  }
+
+  .cls-flight-number {
+    &::before {
+      content: "\e94f";
+      font-family: "InfiFdIcons";
+      color: #fff;
+      font-size: 73px;
+      position: absolute;
+      top: -26px;
+      left: 1px;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+      color: var(--t-common-primary);
+      &.cls-cancelled {
+        color: #FF5555;
+      }
+    }
+  }
+
+  .ant-table-wrapper {
+    table {
+      border-collapse: separate;
+      border-spacing: 0px 17px;
+      .ant-table-tbody>tr>td {
+        border: unset;
+        background: var(--ant-layout-body-bg);
+        padding-block: 10px;
+      }
+      thead {
+        tr {
+          th {
+            border-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table .ant-table-container .ant-table-content table .ant-table-tbody tr td.ant-table-cell {
+    padding: 10px 0px 10px 10px;
+  }
+}
+
+.cls-history {
+  .cls-list-title {
+    color: var(--t-common-grey-color);
+  }
+
+  .cls-table-heading {
+    color: var(--t-header-text-color);
+  }
+
+  .cls-primary-btn {
+    width: 72px;
+    font-size: 12px;
+    font-family: var(--font-medium);
+  }
+
+  .ant-input {
+    background-color: var(--t-header-background);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-adhocList {
+    padding: 0px;
+    .cls-duration-left {
+      top: -10px;
+      right: 10px;
+    }
+    .cls-headerTitle {
+      margin-bottom: 10px;
+    }
+    .cls-header-left {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    .slick-track {
+      width: 100% !important;
+    }
+    .slick-slide {
+      width: 100% !important;
+      .cls-card-span {
+        padding: 0px;
+      }
+      .ant-card-body {
+        padding: 25px 10px 10px;
+        margin-bottom: 15px;
+      }
+    }
+    .cls-filter-col {
+      padding-block: 10px;
+    }
+    .cls-flight-number {
+      &::before {
+        display: none;
+      }
+    }
+    .cls-grey {
+      padding-bottom: 10px;
+      .ant-select {
+        margin-top: 10px;
+      }
+    }
+    .cls-personalized-filter {
+      &.ant-row {
+        justify-content: end;
+        &:has(.ant-flex) {
+          justify-content: space-between;
+        }
+      }
+      .ant-flex {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .ant-typography-secondary {
+          width: 100%;
+        }
+        .ant-space {
+          padding-block: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cls-adhocList {
+    .slick-track {
+      .slick-slide {
+        width: 50% !important;
+        margin-bottom: 20px;
+        &:nth-child(even) {
+          .cls-card-span {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }    
+}
+
+@media (min-width: 1025px) and (max-width: 1350px) {
+  .cls-adhocList {
+    .slick-track {
+      .slick-slide {
+        width: 33.33% !important;
+        margin-bottom: 20px;
+        &:nth-child(3n) {
+          .cls-card-span {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }    
+}

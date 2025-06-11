@@ -1,0 +1,36 @@
+.cls-search-flight {
+  .ant-card {
+    border-radius: 10px;
+  }
+  .ant-card-body {
+    padding: 15px;
+  }
+  .ant-btn-default {
+    padding: 0px 15px;
+    font-size: 12px;
+  }
+  .ant-btn-default:active,
+  .ant-btn-default:focus {
+    color: #fff;
+    background-color: var(--text-blue);
+    font-family: var(--font-semibold);
+  }
+  .ant-btn-link {
+    color: #1886d9;
+  }
+  span {
+    // display: inline-block;
+    color: #aaaaaa;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--text-blue);
+    border-color: var(--text-blue);
+  }
+
+  .ant-slider-track {
+    background-color: var(--text-blue);
+  }
+  .ant-slider-handle {
+    border: 2px solid var(--text-blue);
+  }
+}

@@ -1,0 +1,202 @@
+// @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+.h-100 {
+  height: 100%;
+}
+
+.title {
+  font-size: 34px;
+  color: var(--text-white);
+  // font-family: "Righteous", cursive;
+  margin-bottom: 0;
+  text-align: center;
+  span {
+    color: var(--ant-primary-color);
+  }
+  &-sub {
+    color: var(--app-title-color);
+  }
+}
+
+.container {
+  &-wrapper {
+    @extend .h-100;
+    background: var(--t-login-bg-color);
+    &-modal{
+      align-items: center;
+    }
+  }
+  &-logo {
+    margin: 25px 0 50px;
+  }
+  &-logo img {
+    width: 165px;
+  }
+  &Image {
+    width: 100%;
+    background: linear-gradient(
+        218.95deg,
+        rgba(11, 44, 90, 0.78) 0%,
+        rgba(19, 55, 105, 0.78) 99.01%
+      ),
+      url(../../assets/images/Common/landing_bg.webp);
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @extend .h-100;
+  }
+  &-imageAK {
+    background: linear-gradient(to bottom, rgba(255, 200, 200, 0.5), rgba(255, 220, 220, 0.5)),
+    url(../../assets/images/Common/landing_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-image6E {
+    background: -webkit-linear-gradient(top, rgba(38, 104, 247, 0.2), rgba(24, 48, 96, 0.2)),
+    url(../../assets/images/Common/landing_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-imageXY {
+    background: linear-gradient(to right, rgba(102, 217, 209, 0.5), rgba(217, 250, 255, 0.5)),
+    url(../../assets/images/Common/landing_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-header {
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &-poweredby {
+    text-align: right;
+    font-size: 11px;
+    padding: 0 20px 5px;
+    color: var(--footer-gray-color);
+  }
+}
+.clsContentCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-bottom: 15px;;;
+  // height: 75vh2
+  & svg{
+    width: 232px;
+  }
+}
+.clsContentCentermodal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 130px;
+  margin-bottom: 15px;
+  // height: 75vh2
+  svg{
+    width: 153px;
+  }
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  .cls-logo-img {
+    width: 135px !important;
+  }
+
+  button {
+    // color: var(--theme-login-input-text-color);
+    color: var(--reschedule-primary-color);
+    padding: 0;
+    span {
+      font-size: 15px;
+      // font-weight: normal !important;
+      font-weight: 700;
+    }
+  }
+}
+.cls_description_heading {
+  text-align: left;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 39px;
+  margin-block: 15px;
+}
+.cls_description_headingmodal {
+  text-align: left;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.cls_ul_points {
+  line-height: 45px;
+  font-size: 21px;
+}
+.cls_ul_points_modal {
+  line-height: 30px;
+  font-size: 14px;
+}
+.cls_description_points {
+  font-family: var(--font-regular);
+  color: #ffffff;
+  margin-left: 35px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  &.cls_description_pointsmodal{
+    margin-left: 25px;
+  }
+}
+
+
+// ISS 689
+.cls-right-container-header{
+  flex: 0 0 100%;
+  max-width: 100%;
+  & .cls-header-content{
+    display: flex;
+    padding: 15px;
+    column-gap: 20px;
+  }
+}
+
+.cls-mob-logo {
+  display: none;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .cls-landing-container {
+    display: none;
+  }
+
+  .cls-header {
+    .container {
+      padding-inline: 15px;
+    }
+  }
+
+  .cls-login-container {
+    .cls-header-content {
+      display: none;
+    }
+  }
+
+  .cls-mob-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 85px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1080px) {
+  .cls_ul_points {
+    font-size: 14px;
+  }
+}

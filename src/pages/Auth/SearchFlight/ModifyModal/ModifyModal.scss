@@ -1,0 +1,28 @@
+.cls-modify-modal {
+  top: 80px;
+  margin: 0px auto;
+  max-width: none;
+  .ant-select, .ant-picker {
+    border: 1px solid var(--t-common-grey-color-md);
+    border-radius: 3px;
+    color: var(--t-common-primary);
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+    margin: 5px 0px 0px 0px;
+    font-family: var(--font-medium);
+  }
+  .ant-modal-content {
+    padding-top: 30px;
+  }
+  .cls-modify-from-btn {
+    align-items: flex-end;
+    gap: 7px;
+  }
+  .cls-close-icon {
+    color: var(--t-common-grey-color-md);
+  }
+  h4 {
+    // border-bottom: 1px dashed var(--t-common-grey-color-md);
+  }
+}

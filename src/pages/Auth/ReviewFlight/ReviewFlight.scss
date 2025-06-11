@@ -1,0 +1,410 @@
+.cls-reviewflightchange-row {
+  padding: 30px;
+  background: var(--ant-layout-color-bg-body);
+  .cls-headerTitle {
+    margin-bottom: 10px;
+  }
+  .cls-stop {
+    width: 35%;
+    background-color: var(--t-viewPnr-stop-strip-bg);
+    color: var(--t-viewPnr-stop-strip-text-color);
+    padding: 6px;
+    font-size: 13px;
+    font-family: var(--font-regular);
+    border-radius: 50px;
+    margin: 0px auto 10px;
+  }
+  .cls-trip {
+      text-transform: uppercase;
+      font-family: var(--font-medium);
+      font-size: 12px;
+  }
+  h1 {
+    margin: 0px 0px 4px 0px;
+    font-size: 24px;
+    color: var(--t-common-primary);
+  }
+  p {
+    font-size: 13px;
+    color: #000;
+    margin: 0px;
+  }
+  .cls-heading-color {
+    color: var(--t-common-primary);
+  }
+  .cls-edit-btn {
+    text-align: end;
+    .ant-btn > span {
+      margin-inline: 0px;
+    }
+    .ant-btn {
+      position: absolute;
+      top: -35px;
+      right: 30px;
+      padding: 0px;
+      background-color: transparent;
+      color: var(--t-common-primary);
+      &:hover {
+        background-color: transparent;
+      }
+      .ant-btn-icon {
+        margin-right: 0px;
+        span {
+          &::before {
+            font-size: 12px;
+            color: var(--t-common-primary);
+          }
+        }
+      }
+    }
+  }
+  .cls-review-selected-flight-Modified {
+    .ant-card-bordered {
+      border-radius: 10px;
+      border: 1px solid #4375eb;
+    }
+    .ant-card-body {
+      padding: 0px;
+    }
+    .cls-review-status-Modified {
+      text-align: center;
+      background-color: #4375eb;
+      color: var(--text-white);
+      border-radius: 8px 0px 11px;
+    }
+    .cls-ticket-col {
+      padding: 0px 20px;
+      .ant-card-bordered {
+        border: none;
+      }
+      .cls-flight-col {
+        text-align: center;
+        border-right: 1px dashed #c6c6c6;
+      }
+
+      .cls-flight-det-col,
+      .cls-view-fl,
+      .cls-border-right,
+      .cls-border-right::before,
+      .cls-border-right::after {
+        display: none;
+      }
+      .cls-lightgray {
+        color: #adaeba;
+      }
+    }
+  }
+  .cls-review-selected-flight-Rejected {
+    .ant-card-bordered {
+      border-radius: 10px;
+      border: 1px solid #ff7575;
+    }
+    .ant-card-body {
+      padding: 0px;
+    }
+    .cls-review-status-Rejected {
+      text-align: center;
+      background-color: #ff7575;
+      color: var(--text-white);
+      border-radius: 8px 0px 11px;
+    }
+    .cls-ticket-col {
+      padding: 0px 20px;
+      .ant-card-bordered {
+        border: none;
+      }
+      .cls-flight-col {
+        text-align: center;
+        border-right: 1px dashed #c6c6c6;
+      }
+
+      .cls-flight-det-col,
+      .cls-view-fl,
+      .cls-border-right,
+      .cls-border-right::before,
+      .cls-border-right::after {
+        display: none;
+      }
+      .cls-lightgray {
+        color: #adaeba;
+      }
+    }
+  }
+  .cls-passenger-details {
+    .ant-card-bordered {
+      border-radius: 6px;
+    }
+    .ant-card-body {
+      padding: 20px;
+    }
+    .cls-switch {
+      .ant-switch-checked {
+        margin-left: 10px;
+        background-color: var(--t-common-primary);
+      }
+    }
+    .cls-infant {
+      span {
+        position: relative;
+        top: -4px;
+      }
+    }
+    .cls-pas-details {
+      color: var(--t-review-flight-pax-detail-text-color);
+      font-size: 12px;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner:after {
+      border-color: #0a468c !important;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: var(--text-white);
+      border-color: #0a468c;
+    }
+    .ant-checkbox-checked:after,
+    .ant-checkbox-input:focus + .ant-checkbox-inner,
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner {
+      border-color: #0a468c;
+    }
+    .cls-infoalert {
+      .ant-alert-info .ant-alert-icon {
+        color: var(--t-common-primary);
+      }
+      .ant-alert-info {
+        background-color: var(--t-review-flight-info-msg-bg);
+        border: none;
+      }
+    }
+  }
+  .cls-price-summary {
+    .ant-card-bordered {
+      border-radius: 6px;
+      border: 1px solid #d9d9d9;
+    }
+    .ant-card-body {
+      padding: 17px 20px;
+    }
+    .ant-btn-text {
+      padding: 0px;
+    }
+    .cls-modified-row {
+      transition: max-height 0.2s ease-out;
+    }
+    .cls-mod-items {
+      color: var(--t-common-grey-color);
+    }
+    .ant-alert-warning .ant-alert-icon {
+      color: #ff7575;
+    }
+    .ant-alert {
+      align-items: baseline;
+      padding-top: 13px;
+    }
+    .ant-alert-warning {
+      background: none;
+      border: 2px dashed #ff7575;
+      border-radius: 12px;
+    }
+    .cls-price-summary-btn {
+      .ant-btn-primary {
+        border-radius: 0px;
+      }
+    }
+    .cls-price-summary-back-btn {
+      .ant-btn-default {
+        color: var(--t-common-primary);
+        border-color: var(--t-common-primary);
+      }
+    }
+  }
+  .ant-alert {
+    padding-block: 14px;
+    background-color: var(--t-review-flight-info-msg-bg);
+  }
+  .ant-alert-message {
+    font-size: 12px;
+    font-family: var(--font-regular);
+    text-align: justify;
+    span.fs-16 {
+      padding-bottom: 3px;
+    }
+    span {
+      color: var(--t-review-flight-info-msg-text-color);
+    }
+    &::before{
+      content: "\e948";
+      padding-right: 7px;
+      font-size: 13px;
+      font-family: "InfiFdIcons";
+      color: var(--t-common-primary);
+      display: inline-block;
+      vertical-align: -1px;
+      position: absolute;
+      padding-top: 1px;
+    }
+  }
+  .cls-price-summary {
+    .ant-alert-message {
+      &::before{
+        margin-top: -2px;
+      } 
+    }
+    .cls-modify-alert {
+      .ant-alert-message {
+        &::before{
+          margin-top: 3px;
+        } 
+      }
+    }
+  }
+}
+.ant-divider-horizontal {
+  margin: 8px 0px;
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+  .cls-reviewflightchange-row {
+    padding: 0 0 15px;
+    &:has(.cls-modify-span) {
+      padding-block-end: 70px;
+    }
+    background-color: var(--ant-layout-body-bg);
+    .cls-edit-btn {
+      padding: 0;
+      .ant-btn {
+        position: unset;
+        font-size: 13px;
+        height: 14px;
+        .ant-btn-icon {
+          span {
+            &::before {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+    .cls-passenger-details {
+      margin-block-start: 15px;
+    }
+    .cls-price-summary {
+      margin-block-start: 15px;
+      position: unset;
+    }
+    .cls-stop {
+      width: 100%;
+      margin-block-end: 40px;
+    }
+    .ant-col {
+      &:has(.ant-alert) {
+        padding-inline: 0;
+      }
+    }
+    .ant-alert {
+      padding: 10px;
+      .ant-alert-message {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .cls-review-list {
+      .cls-trip {
+        margin-inline: 10px 0;
+        margin-block-end: 30px;
+      }
+      .ant-row {
+        &:not(.cls-statusRow) {
+          // padding: 0 10px;
+          padding: 0;
+          margin-inline: 10px;
+          align-items: center;
+        }
+        &.cls-flight-route-container {
+          margin-inline: 0;
+          padding-inline: 0;
+          justify-content: center;
+          .cls-flight-duration {
+            margin-block-start: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .cls-reviewflightchange-row {
+    .cls-edit-btn {
+      .ant-btn {
+        top: -95px;
+        right: 0;
+      }
+    }
+    .ant-row {
+      position: relative;
+    }
+    .cls-depDate, .cls-disruptionStatus {
+      position: absolute;
+      top: -29px;
+      left: 0;
+    }
+    .cls-disruptionStatus {
+      right: 0;
+      left: unset;
+    }
+    .cls-special-service {
+      .ant-card-body {
+        padding: 15px !important;
+      }
+    }
+    .cls-stop {
+      width: 100%;
+      margin-block-end: 35px;
+    }
+  }
+}
+
+@media (min-width: 421px) and (max-width: 1200px) {
+  .cls-reviewflightchange-row  {
+    .cls-edit-btn {
+      .ant-btn {
+        position: absolute;
+        right: 0;
+        top: -116px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 600px) {
+  .cls-reviewflightchange-row  {
+    .cls-edit-btn {
+      .ant-btn {
+        position: absolute;
+        right: 0;
+        top: -101px;
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+  .cls-reviewflightchange-row  {
+    .cls-edit-btn {
+      .ant-btn {
+        top: -83px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cls-reviewflightchange-row  {
+    .cls-edit-btn {
+      .ant-btn {
+        top: -95px;
+      }
+    }
+  }
+}
